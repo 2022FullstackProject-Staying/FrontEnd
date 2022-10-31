@@ -1,0 +1,51 @@
+#member_join_area {
+    text-align: center;
+    margin: 0 20%;
+    margin-top: 50px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+#member_join_area > h2 {
+    padding: 30px 0;
+}
+.frm_input_area  input {
+    padding: 10px 13px;
+    width: 50%;
+}
+.frm_input_area > p {
+    margin: 15px 0;
+}
+input#id {
+    width: 33%;
+    margin-right: 2%;
+}
+a.id_check {
+    display: inline-block;
+    width: 15%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+input.input_phone, input.input_check_code {
+    width: 28%;
+    margin-right: 2%;
+}
+input.btn_send_code, input.btn_check_code {
+    width: 20%;
+}
+
+.clause_content {
+    height: 70px;
+    overflow-y: scroll;
+    text-align: left;
+    padding: 5px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
