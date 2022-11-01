@@ -5,53 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원정보</title>
-    <link rel="stylesheet" href="common.css">
-    
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/member_common.css">
+    <link rel="stylesheet" href="css/member_book.css">
 </head>
 <body>
     <div id="wrapper">
-        
-        <!--마이 페이지 메뉴 영역-->
-        <div class="mypage_menu">
-            <nav role="navigation" class="mypage_menu">
-                <ul class="main_menu">
-                    <li>
-                        마이 페이지
-                        <ul class="under_menu">
-                            <li>내 정보 관리</li>
-                            <li>예약 관리</li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-
         <!--컨텐츠 영역-->
-        <div id="contentsArea">
-            <h2>예약 내역 조회</h2>
-            <section class="book_room_area">
-                <div class="book_room_image">
-                    <img src="" alt="예약한 방 사진">
-                </div>
-                <div class="book_room_content">
-                    <p class="book_room_title">숙소 이름</p>
-                    <p class="book_room_name">방 이름</p>
-                    <table>
-                        <tr>
-                            <th>체크인</th><th>체크아웃</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <time datetime="2022-10-20T09:00">10.20(목) 9:00</time>
-                            </td>
-                            <td>
-                                <time datetime="2022-10-23T09:00">10.23(일) 9:00</time>
-                            </td>
-                        </tr>
-                    </table>
-                    <a href="">취소하기 &gt;</a>
-                </div>
-            </section>
+        <div id="contents_area">
+            <!--마이 페이지 메뉴 영역-->
+            <div class="mypage_menu_area">
+                <nav role="navigation" class="mypage_menu">
+                    <ul class="main_menu">
+                        <li>마이 페이지</li>
+                        <li>
+                            <ul class="under_menu">
+                                <li><a href="member_info.html">내 정보 관리</a></li>
+                                <li><a href="member_book.html">예약 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contents_info_area">
+                <section class="contents_info">
+                    <h2>예약 내역 조회</h2>
+                    <section class="book_room_area">
+                        <div class="book_room_image">
+                            <!--
+                                <img src="" alt="예약한 방 사진">
+                            -->
+                        </div>
+                        <div class="book_room_content">
+                            <div class="book_room_l">
+                                <p class="book_room_title">숙소 이름</p>
+                                <p class="book_room_name">방 이름</p>
+                                <table class="book_room_checktime">
+                                    <tr>
+                                        <th>체크인</th><th>체크아웃</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <time datetime="2022-10-20T09:00">10.20(목) 9:00</time>
+                                        </td>
+                                        <td>
+                                            <time datetime="2022-10-23T09:00">10.23(일) 9:00</time>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="review_cancle_area">
+                                <a href="">리뷰작성 &gt;</a><br>
+                                <a href="">취소하기 &gt;</a>
+                            </div>
+                        </div>
+                        <div class="no_book_room">
+                            <div class="no_room_content">
+                                <p>예약한 숙소가 없습니다</p>
+                                <a href="index.html"></a>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
         </div>
     </div>
 </body>

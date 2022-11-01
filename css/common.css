@@ -44,7 +44,10 @@ header, footer, body, html, #wrapper{
     width: 100%;
     min-width: 960px;
 }
-#contentsArea, #footer_inner{
+body, html, #wrapper, #contents_area {
+    height: 100%;
+}
+#contents_area, #footer_inner{
     width: 960px;
     margin: 0 auto;
 }
@@ -82,7 +85,7 @@ header > nav .btn_login {
 
 /*컨텐츠 영역 시작*/
 #contentsArea{
-    min-width: 400px;
+    min-width: 960px;
     background-color: #fff;
     /* overflow: hidden; */
 }
