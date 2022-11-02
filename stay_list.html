@@ -5,12 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--양 방향 슬라이드바-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" type="text/css" media="all" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="js/price_condition.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/price_condition.css"/>
+
+    <!--아이콘-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
+    <!--건너뛰기 링크-->
+    <a id="skipNav" href="#contentsArea">본문 바로가기</a>
+    <!--건너뛰기 링크 종료-->
+
+    <!--wraper 시작-->
     <div id="wrapper">
         <!--컨텐츠 영역-->
         <div id="contents_area">
+            <section class="conditions_map_area">
+                <div class="map_area">
+                    <div class="map"></div>
+                </div>
+                <div class="conditions_area">
+                    <div class="price_condition">
+                        <h3>가격</h3>
+                        <div class="price-range-block">
+                            <div id="slider-range" class="price-filter-range" name="rangeInput"></div>
+                            <div style="margin:30px auto">
+                              <input type="number" min=0 max="9900" oninput="validity.valid||(value='0');" id="min_price" class="price-range-field" />
+                              <input type="number" min=0 max="10000" oninput="validity.valid||(value='10000');" id="max_price" class="price-range-field" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grade_condition">
+                        <h3>평점</h3>
+                        <p>
+                            <input type="checkbox" name="grade_4_up" id="grade_4_up">
+                            <input type="hidden" value="4" name="grade_value">
+                            <label for="grade_4_up">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-plus"></span>
+                            </label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="grade_3_up" id="grade_3_up">
+                            <input type="hidden" value="3" name="grade_value">
+                            <label for="grade_3_up">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-plus"></span>
+                            </label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="grade_2_up" id="grade_2_up">
+                            <input type="hidden" value="2" name="grade_value">
+                            <label for="grade_2_up">
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-plus"></span>
+                            </label>
+                        </p>
+                    </div>
+                    <div class="stay_type_condition">
+                        <h3>숙소 유형</h3>
+                        <p>
+                            <input type="checkbox" name="hotel" id="hotel"><label for="hotel">호텔</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="hanok" id="hanok"><label for="hanok">한옥</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="camping" id="camping"><label for="camping">캠핑장</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="guesthouse" id="guesthouse"><label for="guesthouse">게스트하우스</label>
+                        </p>
+                    </div>
+                    <div class="stay_name_condition">
+                        <h3>숙소명</h3>
+                        <input type="text" name="input_stay_name" id="input_stay_name" placeholder="숙소명">
+                        <span class="fa fa-search" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="stay_list_area">
+                <div class="stay_content">
+                    <div class="stay_image">
+                        
+                    </div>
+                    <div class="stay_info">
+                        <div class="stay_info_l">
+                            <h2>숙소명</h2>
+                            <p>가용인원수</p>
+                            <p>별점</p>
+                        </div>
+                        <div class="stay_info_r">
+                            <p>가격</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 </body>
