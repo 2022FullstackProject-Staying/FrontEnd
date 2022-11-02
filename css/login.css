@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+html, body, div, form, fieldset, p {
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+#login_wrap {
+    margin: 12% auto;
+    width: 470px;
+    height: 500px;
+}
+#login_form {
+    margin-top: 10px;
+    text-align: center;
+    height: 200px;
+}
+fieldset {
+    height: 200px;
+    border: none;
+}
+.title {
+    width: 470px;
+    height: 50px;
+    margin-top: 15px;
+}
+.title > label {
+    display: inline-block;
+    width: 250px;
+    margin-bottom: 3px;
+    text-align: left;
+    color: #777777;
+}
+.title > input {
+    width: 240px;
+    height: 21px;
+}
+fieldset > button {
+    margin-top: 22px;
+    width: 250px;
+    height: 37px;
+    background-color: #0069d9;
+    color: white;
+}
+hr {
+    width: 350px;
+}
+#join {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 250px;
+    height: 37px;
+}
+#naverIdLogin {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 250px;
+    height: 37px;
+    background-color: #19ce60;
+    color: white;
+}
