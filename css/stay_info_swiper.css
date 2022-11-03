@@ -1,5 +1,6 @@
 /*숙소 이미지 슬라이드*/
 .stay_image_swiper_area{
+  display: inline-block;
   position: relative;
   width: 30%;
 }
