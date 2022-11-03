@@ -75,7 +75,59 @@
                 </div>
             </div>
             <div class="stay_contents_area">
+                <section class="rooms_detail_area" id="rooms_detail_area">
+                    <h3 class="stay_content_title" id="room_detail_title">
+                        <a href="#rooms_detail_area" onclick="return false;">숙소상세</a>
+                    </h3>
+                    <!--방 하나의 정보-->
+                    <div class="room_detail_area">
+                        <div class="room_image">
+                            <!--
+                                <img src="" alt="예약한 방 사진">
+                            -->
+                        </div>
+                        <div class="room_content">
+                            <div class="room_l">
+                                <p class="room_name">방 이름</p>
+                                <p class="price">
+                                    <span>가격</span>
+                                    <span id="price"></span>
+                                </p>
+                            </div>
+                            <div class="review_cancle_area">
+                                <button type="button" class="btn_room_book"> 예약하기 (총 <span id="total_price"></span>)</button>
+                            </div>
+                        </div>
+                    </div> 
 
+                </section>
+                <section class="stay_position_area" id="stay_position_area">
+                    <h3 class="stay_content_title" id="stay_position_title">
+                        <a href="#stay_position_area" onclick="return false;">위치</a>
+                    </h3>
+
+                </section>
+                <section class="stay_review_area" id="stay_review_area">
+                    <h3 class="stay_content_title" id="stay_review_title">
+                        <a href="#stay_review_area" onclick="return false;">후기</a>
+                    </h3>
+                    <div class="review_area">
+                        <div class="id_date_area">
+                            <p class="id">아이디</p>
+                            <p class="date">날짜</p>
+                        </div>
+                        <div class="star_content_area">
+                            <p class="mb-3">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <textarea name="review_content" id="review_content" cols="30" rows="10">리뷰 내용</textarea>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
