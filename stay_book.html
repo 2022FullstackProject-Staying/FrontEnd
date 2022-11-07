@@ -9,13 +9,11 @@
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <!--결제페이지 css-->
     <link rel="stylesheet" type="text/css" href="css/stay_book.css">
-    <!-- 결제창 선택시 변경 js-->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    
     <!-- 약관 동의 펼치기-->
     <script src="js/agree_content.js"></script>
-    <!-- 부트스트랩 input태그 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- 부트스트랩 input태그, 약관 동의창 css, js -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -28,7 +26,7 @@
         <header>
             <h1 class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="페이지 로고">
+                    <img src="images/Home/logo/logo.PNG" alt="페이지 로고">
                 </a>
             </h1>
             <nav role="navigation">
@@ -66,7 +64,7 @@
                             <label class="form-check-label" for="flexRadioDefault2">신용카드</label>
                         </div>
                     </div>
-                    <div class="payment">
+                <!--    <div class="payment">
                         <div class="pay1">
                             <p>
                                 <label>입금 은행</label>
@@ -94,9 +92,9 @@
                                   </select>
                             </p>
                         </div>
-                    </div>
+                    </div>  -->
                 </div>
-                <div class="agree">
+           <!-- <div class="agree">
                     <div class="form-check">
                         <input type="radio" id="agree" class="form-check-input" name="flexRadioDefault1">
                         <label class="form-check-label" for="agree">약관 동의합니다. </label><span onclick="show_content();"> 눌러서 내용보기</sapn>
@@ -132,14 +130,59 @@
                         1. '갑'은 타인의 명의나 주민등록번호를 도용하여 회원가입신청을 할 경우 회원가입신청을 거절할 수 있다.
                         2. 회원가입신청이 승인이 된 후에도 허위사실의 기재가 발각되거나 '갑'의 명예를 회손시키거나 음란물이나 불건전한 내용을 게재할 경우 회원의 자격을 강제 탈퇴시킬 수 있다.
                     </div>
+                </div> -->
+
+                <!-- 약관 동의창 -->
+                <div class="clause_area">
+                    <div class="accordion close" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <input type="checkbox" name="clause_check" id="clause_check" class="clause_check">
+                                    <label for="clause_check" class="clause_check_label">약관동의</label>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p class="clause_content">
+                                        서비스 이용약관<br>
+                                        제 1조 (목적)<br>
+                                        본 약관은 서비스(이하 "회사"라 한다)는 홈페이지에서 제공하는 서비스(이하 "서비스"라 한다)를 제공함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.<br>
+                                        제 2조 (용어의 정의)<br>
+                                        1. 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br>
+                                        '서비스'란 회사가 이용자에게 서비스를 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 구성한 가상의 공간을 의미하며, 서비스 자체를 의미하기도 합니다.<br>
+                                        '회원(이하 "회원"이라 한다)'이란 개인정보를 제공하여 회원등록을 한 자로서 홈페이지의 정보를 지속적으로 제공받으며 홈페이지가 제공하는 서비스를 계속적으로 이용할 수 있는 자를 말합니다.<br>
+                                        '아이디(이하 "ID"라 한다)'란 회원의 식별과 회원의 서비스 이용을 위하여 회원이 선정하고 회사가 승인하는 회원 고유의 계정 정보를 의미합니다.<br>
+                                        '비밀번호'란 회원이 부여 받은 ID와 일치된 회원임을 확인하고, 회원의 개인정보를 보호하기 위하여 회원이 정한 문자와 숫자의 조합을 의미합니다.<br>
+                                        '회원탈퇴(이하 "탈퇴"라 한다)'란 회원이 이용계약을 해지하는 것을 의미합니다.<br>
+                                        2. 본 약관에서 사용하는 용어의 정의는 제1항에서 정하는 것을 제외하고는 관계법령 및 서비스 별 안내에서 정하는 바에 의합니다.<br>
+                                        제 3조 (이용약관의 효력 및 변경)<br>
+                                        1. 회사는 본 약관의 내용을 회원이 쉽게 알 수 있도록 각 서비스 사이트의 초기 서비스화면에 게시합니다.<br>
+                                        2. 회사는 약관의 규제에 관한 법률, 전자거래기본법, 전자 서명법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 관련법을 위배하지 않는 범위에서 본 약관을 개정할 수 있습니다.<br>
+                                        3. 회사는 본 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행 약관과 함께 회사가 제공하는 서비스 사이트의 초기 화면에 그 적용일자 7일 이전부터 적용일자 전일까지 공지합니다.<br>
+                                        다만, 회원에게 불리하게 약관내용을 변경하는 경우에는 최소한 30일 이상의 사전 유예기간을 두고 공지합니다. 이 경우 회사는 개정 전 내용과 개정 후 내용을 명확하게 비교하여 회원이 알기 쉽도록 표시합니다.<br>
+                                        4. 회원은 개정된 약관에 대해 거부할 권리가 있습니다. 회원은 개정된 약관에 동의하지 않을 경우 서비스 이용을 중단하고 회원등록을 해지할 수 있습니다.<br>
+                                        단, 개정된 약관의 효력 발생일 이후에도 서비스를 계속 이용할 경우에는 약관의 변경사항에 동의한 것으로 간주합니다.<br>
+                                        5. 변경된 약관에 대한 정보를 알지 못해 발생하는 회원 피해는 회사가 책임지지 않습니다.<br>
+                                        제 4조 (약관 외 준칙)<br>
+                                        1. 본 약관은 회사가 제공하는 서비스에 관해 별도의 정책 및 운영규칙과 함께 적용됩니다.<br>
+                                        2. 본 약관에 명시되지 아니한 사항과 본 약관의 해석에 관하여는 관계법령에 따릅니다.<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="room_pay">
+                    <button type="button" class="btn btn-outline-primary btn-sm">결제하기</button>
                 </div>
             </div>
-
+            
             <!-- 우측 숙소 정보 란 -->
             <div id="room_info">
                 <div class="room_info_wrap">
                     <div class="room_info_pic">
-                        <img src="images/객실내부.jpg" alt="객실사진">
+                        <img src="images/stay_book/객실내부.jpg" alt="객실사진">
                     </div>
                     <div class="room_info_data">
                         <p class="room_name">ㅇㅇㅇ호텔</p>
@@ -150,14 +193,9 @@
                         <p class="date">22년 11월 26일   12시</p>
                         <p class="total">총 90,000원</p>
                     </div>
-                    <div class="room_pay">
-                        <button>결제하기</button>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="js/stay_book.js"></script>
 </body>
 </html>

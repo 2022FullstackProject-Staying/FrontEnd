@@ -1,7 +1,9 @@
 @charset "utf-8";
 
+
+/* 좌측 예약자, 결제 정보란 */
 #contentsArea {
-    height: 900px;
+    height: 750px;
     margin-top: 80px;
 }
 
@@ -40,11 +42,12 @@
     margin-left: 20px;
     font-size: 10px;
 }
+/* // 예약자 정보 */
 
 
 /* 결제 정보 */
 .payment_info {
-    height: 300px;
+    height: 140px;
     margin-top: 60px;
 }
 .payment_info > h2 {
@@ -54,12 +57,15 @@
 }
 .form_check_wrap {
     height: 30px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .form_check_wrap > div {
     display: inline-block;
     margin-left: 20px;
 }
+/* // 결제 정보 */
+
+/*
 .payment {
     height: 190px;
     margin-top: 30px;
@@ -76,11 +82,11 @@
     display: inline-block;
     margin-left: 15px;
 } 
-.pay1 p:nth-child(2) input { /* 입금자명 라인*/
+.pay1 p:nth-child(2) input {  입금자명 라인
     margin-left: 20px;
     width: 150px;
 }
-.pay1 p:nth-child(3) { /* 입금계좌 라인*/
+.pay1 p:nth-child(3) {  입금계좌 라인
     margin-left: 20px;
 }
 
@@ -98,7 +104,7 @@
     width: 150px;
     display: inline-block;
     margin-left: 15px;
-} 
+}  
 
 .agree {
 }
@@ -121,8 +127,80 @@
     margin: 15px 0 0 20px;
     border: 1px solid #888;
     display: none;
+} */
+
+/* 약관 동의 */
+.clause_area {
+    width: 300px;
+}
+input[type="checkbox"]{
+    zoom: 1.5;
+    width: auto;
+    margin: 1%;
+}
+.clause_check_label {
+    margin-left: 2%;
 }
 
+.accordion{
+    --bs-accordion-btn-focus-border-color: none;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+.accordion-item:first-of-type .accordion-button, .accordion-item:last-of-type {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: #fff;
+    box-shadow: none;
+}
+.accordion-button {
+    padding: 10px 13px;
+}
+.accordion-button:focus, .accordion-collapse:focus, .accordion-item{
+    border: none;
+}
+.accordion-body{
+    padding: 5px 13px;
+}
+.clause_content {
+    height: 70px;
+    overflow-y: scroll;
+    text-align: left;
+    padding: 5px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-size: 0.8rem;
+    color: #333;
+}
+/* // 약관동의 */
+
+
+/* 결제버튼*/
+.room_pay {
+    width: 260px;
+    height: 40px;
+    margin: 50px 0 0 20px;
+    text-align: center;
+}
+.room_pay > button {
+    border: none;
+    border-radius: 5px;
+    width: 160px;
+    height: 40px;
+    background-color: rgb(83, 153, 219);
+    color: white;
+}
+/* // 결제버튼 */
+/* // 좌측 예약자, 결제 정보란 */
 
 /* 우측 숙소 정보란 */
 #room_info {
@@ -175,20 +253,7 @@
 .total {
     text-align: right;
     font-weight: bold;
-    margin: 10px 10px 0 0;
+    margin: 50px 10px 0 0;
     font-size: 20px;
 }
-.room_pay {
-    width: 260px;
-    height: 40px;
-    margin: 20px 0 0 20px;
-    text-align: center;
-}
-.room_pay > button {
-    border: none;
-    border-radius: 5px;
-    width: 160px;
-    height: 40px;
-    background-color: rgb(83, 153, 219);
-    color: white;
-}
+/* // 우측 숙소 정보란 */
