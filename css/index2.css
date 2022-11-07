@@ -85,7 +85,6 @@ main {
     overflow: hidden;
 }
 .best_hotel > h2, .best_guesthouse > h2, .best_camping > h2, .best_hanok > h2 {
-    
     height: 40px;
     padding-left: 21px;
     font-size: 21px;
