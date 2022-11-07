@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--수정, 추가 같은 폼 사용-->
+    <div id="wrapper">
+        <!--컨텐츠 영역-->
+        <div id="contents_area">
+            <div class="visual_image">
+                <!--
+                    <img src="" alt="숙소 대표 사진">
+                -->
+                <h2>숙소명</h2>
+            </div>
+            <section class="room_form_area">
+                <form action="" name="frm_room_info">
+                    <h2 class="hidden">숙소 방 수정 폼</h2>
+                    <div class="room_info">
+                        <p>
+                            <span class="label_name">
+                                <label for="room_image">객실사진</label>
+                                <input type="file" name="room_image" id="room_image">
+                            </span>
+                            <span class="label_content">
+                                <img src="" alt="">
+                            </span>
+                        </p>
+                        <p>
+                            <span class="label_name">
+                                <label for="room_name">이름</label>
+                            </span>
+                            <span class="label_content">
+                                <input type="number" name="room_name" id="room_name">
+                            </span>
+                        </p>
+                        <p>
+                            <span class="label_name">
+                                <label for="room_price">가격</label>
+                            </span>
+                            <span class="label_content">
+                                <input type="number" name="room_price" id="room_price">
+                            </span>
+                        </p>
+                        <p>
+                            <span class="label_name">
+                                <label for="room_per_num">인원</label>
+                            </span>
+                            <span class="label_content">
+                                <input type="number" name="room_per_num" id="room_per_num">
+                            </span>
+                        </p>
+                    </div>
+                    <button type="button" class="btn_info_save">저장하기</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
