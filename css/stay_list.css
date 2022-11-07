@@ -1,0 +1,42 @@
+/* 조건 , 지도 영역 */
+.conditions_map_area {
+    width: 28%;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 5%;
+    padding-top: 20px;
+    border-right: 1px solid #ccc;
+}
+.map {
+    width: 90%;
+    height: 150px;
+    border: 1px solid #aaa;
+}
+
+/* 숙소 목록 영역 */
+#contents_area {
+    position: relative;
+}
+
+.stay_list_area {
+    width: 60%;
+    display: inline-block;
+    position: absolute;    
+    top: 180px;
+}
+.stay_content {
+    border: 1px solid #aaa;
+    padding: 15px 25px;
+}
+.stay_image {
+    display: inline-block;
+    width: 30%;
+    height: 150px;
+    background-color: #666;
+}
+.stay_info {
+    display: inline-block;
+    width: 65%;
+    margin-left: 2%;
+
+}

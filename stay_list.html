@@ -23,6 +23,8 @@
 
 
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/search_common.css">
+    <link rel="stylesheet" href="css/stay_list.css">
 </head>
 <body>
     <!--건너뛰기 링크-->
@@ -33,35 +35,32 @@
     <div id="wrapper">
         <!--컨텐츠 영역-->
         <div id="contents_area">
-            <section class="stay_search_area">
+            <form action="" name="frm_stay_search" class="stay_search_area">
                 <select name="stay_select" id="stay_select">
+                    <option value="default" class="hidden"></option>
                     <option value="house">펜션</option>
                     <option value="hotel">호텔</option>
                     <option value="camping">캠핑장</option>
                     <option value="hanok">한옥</option>
                 </select>
-                <div class="date_wrap">
-                    <div class="date">
-                        <input type="text" name="chech_in" class="check_in" id="datepicker1" placeholder="체크인 날짜">
-                        <input type="text" name="chech_out" class="check_out" id="datepicker2" placeholder="체크아웃 날짜">
-                        <input type="text" class="search" name="stay_person" placeholder="인원수">
-                        <button type="button" class="btn btn-outline-primary btn-sm">검색</button>
-                    </div>
-                </div>
-            </section>
+                <input type="text" name="chech_in" class="check_in" id="datepicker1" placeholder="체크인 날짜">
+                <input type="text" name="chech_out" class="check_out" id="datepicker2" placeholder="체크아웃 날짜">
+                <input type="text" class="stay_person" name="stay_person" placeholder="인원수">
+                <button type="button" class="btn_stay_search">검색</button>
+            </form>
             <section class="conditions_map_area">
                 <div class="map_area">
-                    <div class="map"></div>
+                    <div class="map" id="map"> 지도</div>
                 </div>
                 <div class="conditions_form_area">
-                    <form action="">
+                    <form action="" name="frm_stay_condition">
                         <div class="price_condition">
                             <h3>가격</h3>
                             <div class="price-range-block">
-                                <div id="slider-range" class="price-filter-range" name="rangeInput"></div>
+                                <div id="slider-range" class="price-filter-range" name="range_input"></div>
                                 <div style="margin:30px auto">
-                                <input type="number" min=0 max="9900" oninput="validity.valid||(value='0');" id="min_price" class="price-range-field" />
-                                <input type="number" min=0 max="10000" oninput="validity.valid||(value='10000');" id="max_price" class="price-range-field" />
+                                    <input type="number" min=0 max="9900" oninput="validity.valid||(value='0');" name="min_price" id="min_price" class="price-range-field" />
+                                    <input type="number" min=0 max="10000" oninput="validity.valid||(value='10000');" name="max_price" id="max_price" class="price-range-field" />
                                 </div>
                             </div>
                         </div>
@@ -122,7 +121,9 @@
             <section class="stay_list_area">
                 <div class="stay_content">
                     <div class="stay_image">
-                        
+                        <!--
+                            <img src="" alt="">
+                        -->
                     </div>
                     <div class="stay_info">
                         <div class="stay_info_l">
