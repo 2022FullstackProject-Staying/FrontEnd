@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <!--양 방향 슬라이드바-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" type="text/css" media="all" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
-	<script src="js/price_condition.js" type="text/javascript"></script>
-	<link rel="stylesheet" type="text/css" href="css/price_condition.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/price_condition.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/price_condition.css"/>
 
     <!--아이콘-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,7 +21,6 @@
     <script src="js/datepicker.min.js"></script>
     <script src="js/datepicker.ko.js"></script>
     <script defer src="js/datepicker.js"></script>
-
 
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/search_common.css">
@@ -33,9 +33,23 @@
 
     <!--wraper 시작-->
     <div id="wrapper">
-        <!--컨텐츠 영역-->
-        <div id="contents_area">
-            <form action="" name="frm_stay_search" class="stay_search_area">
+        <!--헤더 영역 시작-->
+        <header>
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="images/logocap.png" alt="페이지 로고">
+                </a>
+            </h1>
+            <nav role="navigation">
+                <input type="button" value="로그인" class="btn_login">
+            </nav>
+        </header>
+        <!--헤더 영역 종료-->
+
+        <!--메인 검색 영역-->
+        <form action="" name="frm_stay_search" class="stay_search_area">
+            <label>
+                <span class="bed fa fa-bed" aria-hidden="true"></span>
                 <select name="stay_select" id="stay_select">
                     <option value="default" class="hidden"></option>
                     <option value="house">펜션</option>
@@ -43,11 +57,24 @@
                     <option value="camping">캠핑장</option>
                     <option value="hanok">한옥</option>
                 </select>
-                <input type="text" name="chech_in" class="check_in" id="datepicker1" placeholder="체크인 날짜">
-                <input type="text" name="chech_out" class="check_out" id="datepicker2" placeholder="체크아웃 날짜">
+            </label>
+            <label>
+                <span class="cal fa fa-calendar"></span>
+                <input type="text" name="chech_in" class="check_in" id="datepicker1" placeholder="체크인">
+            </label>
+            <label>
+                <span class="cal fa fa-calendar"></span>
+                <input type="text" name="chech_out" class="check_out" id="datepicker2" placeholder="체크아웃">
+            </label>
+            <label>
+                <span class="users fa fa-user-o" aria-hidden="true"></span>
                 <input type="text" class="stay_person" name="stay_person" placeholder="인원수">
-                <button type="button" class="btn_stay_search">검색</button>
-            </form>
+            </label>
+            <button type="button" class="btn_stay_search"><span class=" saerch fa fa-search" aria-hidden="true"></span></button>
+        </form>
+        <!--컨텐츠 영역-->
+        <div id="contents_area">
+            <!--조건, 지도 영역-->
             <section class="conditions_map_area">
                 <div class="map_area">
                     <div class="map" id="map"> 지도</div>
@@ -58,8 +85,8 @@
                             <h3>가격</h3>
                             <div class="price-range-block">
                                 <div id="slider-range" class="price-filter-range" name="range_input"></div>
-                                <div style="margin:30px auto">
-                                    <input type="number" min=0 max="9900" oninput="validity.valid||(value='0');" name="min_price" id="min_price" class="price-range-field" />
+                                <div class="price_value_input">
+                                    <input type="number" min=0 max="9900" oninput="validity.valid||(value='0');" name="min_price" id="min_price" class="price-range-field" /> -
                                     <input type="number" min=0 max="10000" oninput="validity.valid||(value='10000');" name="max_price" id="max_price" class="price-range-field" />
                                 </div>
                             </div>
@@ -118,6 +145,7 @@
                     </form>
                 </div>
             </section>
+            <!--숙소 목록 영역-->
             <section class="stay_list_area">
                 <div class="stay_content">
                     <div class="stay_image">

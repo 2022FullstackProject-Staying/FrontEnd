@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 	$("#min_price,#max_price").on('change', function () {
 
+
 	  $('#price-range-submit').show();
 
 	  var min_price_range = parseInt($("#min_price").val());
@@ -72,8 +73,7 @@ $(document).ready(function(){
 
 	  var min_price = $('#min_price').val();
 	  var max_price = $('#max_price').val();
-
-	  $("#searchResults").text("Here List of products will be shown which are cost between " + min_price  +" "+ "and" + " "+ max_price + ".");
 	});
 
+	
 });

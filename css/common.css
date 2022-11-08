@@ -1,5 +1,5 @@
 /*공통 적용*/
-html, body, a, div, header, h1, nav, input, section, h2, form
+html, body, a, div, header, h1, nav, input, section, h2, form, label
 , p, button, span, table, td, tr, footer {
     margin: 0;
     padding: 0;
@@ -7,6 +7,9 @@ html, body, a, div, header, h1, nav, input, section, h2, form
 a{
     color: #000;
     text-decoration: none;
+}
+.hidden {
+    display: none;
 }
 .hidden, legend, caption {
     position: absolute;

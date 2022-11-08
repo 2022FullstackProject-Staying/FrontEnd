@@ -1,17 +1,85 @@
 /* 조건 , 지도 영역 */
 .conditions_map_area {
-    width: 28%;
+    width: 25%;
     display: inline-block;
     margin-top: 20px;
     margin-right: 5%;
-    padding-top: 20px;
-    border-right: 1px solid #ccc;
+    position: sticky;
+}
+.map_area {
+    padding: 10px 0 ;
 }
 .map {
-    width: 90%;
-    height: 150px;
+    width: 95%;
+    height: 90px;
     border: 1px solid #aaa;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
 }
+div[class $= "condition"] > h3 {
+    font-size: 1rem;
+    color: #444;
+}
+div[class $= "condition"] {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0 30px 0;
+}
+
+/*라디오 버튼 커스텀 시작*/
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #48a9ed;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+/*라디오 버튼 커스텀 종료*/
 
 /* 숙소 목록 영역 */
 #contents_area {
@@ -19,20 +87,29 @@
 }
 
 .stay_list_area {
-    width: 60%;
+    width: 68%;
     display: inline-block;
-    position: absolute;    
-    top: 180px;
+    position: absolute;
+    top: 70px;
 }
 .stay_content {
     border: 1px solid #aaa;
-    padding: 15px 25px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .stay_image {
     display: inline-block;
     width: 30%;
-    height: 150px;
+    height: 160px;
     background-color: #666;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .stay_info {
     display: inline-block;
