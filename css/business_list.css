@@ -52,9 +52,12 @@ main {
 /* room info */
 #management {
     width: 958px;
-    height: 437px;
+    height: 450px;
     overflow: hidden;
     margin: 60px 0 80px;
+}
+#management > table {
+    margin-bottom: 50px;
 }
 .hei {
     height: 100px;
@@ -69,8 +72,12 @@ main {
 
 /* review */
 /* id, date */
+#review_wrap hr {
+    margin: 13px 0;
+}
 #review_wrap {
-    height: 440px;
+    height: 400px;
+    margin-top: 45px;
     margin-bottom: 80px;
 }
 

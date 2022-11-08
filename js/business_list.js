@@ -1,3 +1,4 @@
+/* 객실관리, 리뷰 클릭시 하단 화면 변경 */
 $(function() {
     $('.select1').click(function() {
         $('.table').show();
@@ -13,6 +14,7 @@ $(function() {
     })
 });
 
+/* 클릭시 굵기 변경 */
 window.onload = function () {
 
     var f = document.getElementsByClassName("select")[0];
