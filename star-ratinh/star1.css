@@ -1,0 +1,62 @@
+/* Star Rating Styles */
+.starRating {
+    display: table;
+    margin-bottom: 15px;
+}
+.starRating span {
+    color: #888888;
+    cursor: pointer;
+    display: table-cell;
+    position: relative;
+    padding-right: 6px;
+}
+.starRating span:last-child {
+    padding-right: 0;
+}
+.starRating i {
+    font-size: 32px;
+    transition: opacity 0.4s;
+    -webkit-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    -ms-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+}
+.starRating .fa-star, .fa-star-half  {
+    color: #ffc000;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+.starRating span:hover ~ span,
+.starRated span.active ~ span {
+    color: #888888;
+}
+.starRating:hover .fa-star,
+.starRating span:hover ~ span .fa-star-o,
+.starRating:hover .fa-star-half,
+.starRating span:hover ~ span .fa-star-half {
+    opacity: 1 ;
+}
+.starRating:hover .fa-star-o,
+.starRating span:hover ~ span .fa-star,
+.starRating:hover .fa-star-half,
+.starRating span:hover ~ span .fa-star-half {
+    opacity: 0 ;
+}
+.starRated .fa-star,
+.starRated span.active ~ span .fa-star-o, 
+.starRated .fa-star-half,
+.starRated span.active ~ span .fa-star-half {
+    opacity: 1;
+}
+.starRated .fa-star-o,
+.starRated span.active ~ span .fa-star,
+.starRated .fa-star-half,
+.starRated span.active ~ span .fa-star-half {
+    opacity: 0;
+}
+  
+.starRating {
+    margin-left: auto;
+    margin-right: auto;
+}
