@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--스와이퍼-->
+    <link rel="stylesheet" href="css/stay_info_swiper.css">
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script defer src="js/stay_info_swiper.js"></script>
+    <!--아이콘-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/stay_info.css">
+
+    <script src="js/stay_info.js"></script>
+</head>
+<body>
+    <!--건너뛰기 링크-->
+    <a id="skipNav" href="#contentsArea">본문 바로가기</a>
+    <!--건너뛰기 링크 종료-->
+
+    <!--wraper 시작-->
+    <div id="wrapper">
+        <!--컨텐츠 영역-->
+        <div id="contents_area">
+            <!-- 슬라이드 , 숙소정보 -->
+            <div class="stay_info_area">
+                <div class="stay_image_swiper_area slide">
+                    <div
+                    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                    class="stay_image_swiper stay_image_swiper_top">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div thumbsSlider="" class="stay_image_swiper stay_image_swiper_bottom">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stay_info">
+                    <h2>숙소 명</h2>
+                    <p>숙소 설명 내용</p>
+                </div>
+            </div>
+            <!-- // 슬라이드 , 숙소정보 -->
+
+            <!-- 하단 내용 -->
+            <div class="stay_contents_area">
+                <section class="stay_contents rooms_detail_area" id="rooms_detail_area">
+                    <h3 class="stay_content_title" id="room_detail_title">
+                        <a href="#rooms_detail_area" onclick="return false;">숙소상세</a>
+                    </h3>
+                    <!--방 하나의 정보-->
+                    <div class="room_detail_area">
+                        <div class="room_image">
+                            <!--
+                                <img src="" alt="예약한 방 사진">
+                            -->
+                        </div>
+                        <div class="room_content">
+                            <div class="room_l">
+                                <p class="room_name">방 이름</p>
+                                <p class="price">
+                                    <span>가격</span>
+                                    <span id="price"></span>
+                                </p>
+                            </div>
+                            <div class="review_cancle_area">
+                                <button type="button" class="btn_room_book"> 예약하기 (총 <span id="total_price"></span>)</button>
+                            </div>
+                        </div>
+                    </div> 
+                </section>
+                <section class="stay_contents stay_position_area" id="stay_position_area">
+                    <h3 class="stay_content_title" id="stay_position_title">
+                        <a href="#stay_position_area" onclick="return false;">위치</a>
+                    </h3>
+
+                </section>
+                <section class="stay_contents stay_review_area" id="stay_review_area">
+                    <h3 class="stay_content_title" id="stay_review_title">
+                        <a href="#stay_review_area" onclick="return false;">후기</a>
+                    </h3>
+                    <div class="review_area">
+                        <div class="id_date_area">
+                            <p class="id">아이디</p>
+                            <p class="date">날짜</p>
+                        </div>
+                        <div class="star_content_area">
+                            <p class="mb-3">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <textarea name="review_content" id="review_content" cols="30" rows="10">리뷰 내용</textarea>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- // 하단 내용 -->
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+#contents_area {
+    height: 100%;
+}
+#contents_area {
+    width: 960px;
+    margin: 0 auto;
+}
+
+
+/* 상단 슬라이드 , 숙소정보 */
+.stay_info_area {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.slide {
+    width: 480px;
+    height: 420px;
+}
+
+.stay_info {
+    display: inline-block;
+    margin-left: 40px;
+    width: 440px;
+    height: 300px;
+}
+.stay_info > h2 {
+    margin: 10px 0 20px;
+}
+.stay_info > p {
+    width: 440px;
+    height: 270px;
+    border: 1px solid #999;
+}
+/* // 상단 슬라이드 , 숙소정보 */
+
+
+/* 하단 내용 */
+.stay_contents_area {
+    position: relative;
+}
+
+.stay_contents {
+    width: 100%;
+    min-height: 300px;
+    position: absolute;
+    background-color: #fff;
+    top: 100px;
+}
+.stay_contents > div {
+    background-color: #fff;   
+}
+.stay_content_title {
+    position: absolute;
+    display: inline;
+    top: -100px;
+}
+
+#rooms_detail_area {
+    
+    background-color: green;
+}
+#room_detail_title {
+    left: 10px;
+}
+.room_detail_area {
+    width: 100px;
+    background-color: yellow;
+}
+.room_detail_area > .room_image {
+    width: 330px;
+    height: 200px;
+    background-color: blue;
+}
+.room_content {
+    
+    background-color: red;
+}
+
+#stay_position_title {
+    left: 110px;
+}
+
+#stay_review_title {
+    left: 210px;
+}
+
+.rooms_detail_area {
+    z-index: 10;
+}
+
+/* // 하단 내용 */
+
+
+
+
+.target {
+    color: #f66;
+}
