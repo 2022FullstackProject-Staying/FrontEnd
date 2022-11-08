@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙소 정보</title>
+    <!--스와이퍼-->
+    <link rel="stylesheet" href="css/stay_info_swiper.css">
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script defer src="js/stay_info_swiper.js"></script>
+    <!--아이콘-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--공통 css-->
+    <link rel="stylesheet" href="css/common.css">
+    <!-- 숙소정보 페이지 css -->
+    <link rel="stylesheet" href="css/stay_info_test.css">
+    <!-- 부트스트랩 css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+<body>
+    <!--건너뛰기 링크-->
+    <a id="skipNav" href="#contentsArea">본문 바로가기</a>
+    <!--건너뛰기 링크 종료-->
+
+    <!--wraper 시작-->
+    <div id="wrapper">
+        <!--컨텐츠 영역-->
+        <div id="contents_area" class="row">
+            <!-- 슬라이드 , 숙소정보 -->
+            <div class="stay_info_area col">
+                <div class="stay_image_swiper_area slide">
+                    <div
+                    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                    class="stay_image_swiper stay_image_swiper_top">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div thumbsSlider="" class="stay_image_swiper stay_image_swiper_bottom">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stay_info">
+                    <h2>숙소 명</h2>
+                    <p>숙소 설명 내용</p>
+                </div>
+            </div>
+            <!-- // 슬라이드 , 숙소정보 -->
+
+            <!-- 숙소상세, 위치, 후기 메뉴-->
+            <div class="col12" id="select_menu">
+                <div class="container text-center">
+                    <div class="row row-cols-auto">
+                        <div class="col hover" id="detail">객실 상세</div>
+                        <div class="col hover" id="place">위치</div>
+                        <div class="col hover" id="review">후기</div>
+                    </div>
+                </div>
+            </div>
+            <!-- // 숙소상세, 위치, 후기 메뉴-->
+
+            <!-- 하단 내용 -->
+            <div class="col12" id="stay_contents_area" >
+                <div class="card mb-3" id="hotel_room_wrap" >
+                    <div class="row g-0 room_info">
+                        <div class="col-md-4 room_info_img">
+                            <img src="images/stay_info/double.jpg" class="img-fluid " alt="double room">
+                        </div>
+                        <div class="col-md-8">
+                            <div id="room_info_content1" class="card-body room_info_content">
+                                <h5 class="card-title">스탠다드 더블룸</h5>
+                                <p class="card-text">가격<span>ㅇㅇㅇㅇ원 / 1박</span></p>
+                                <p id="pay_btn1" class="card-text"><button type="button" class="btn btn-outline-primary btn-sm">예약하기</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" id="hotel_room_wrap" >
+                    <div class="row g-0 room_info">
+                        <div class="col-md-4 room_info_img">
+                            <img src="images/stay_info/Deluxe Twin.jpg" class="img-fluid" alt="Deluxe room">
+                        </div>
+                        <div class="col-md-8">
+                            <div id="room_info_content2" class="card-body room_info_content">
+                                <h5 class="card-title">디럭스 트윈룸</h5>
+                                <p class="card-text">가격<span>ㅇㅇㅇㅇ원 / 1박</span></p>
+                                <p id="pay_btn2" class="card-text"><button type="button" class="btn btn-outline-primary btn-sm">예약하기</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" id="hotel_room_wrap" >
+                    <div class="row g-0 room_info">
+                        <div class="col-md-4 room_info_img">
+                            <img src="images/stay_info/suite room.jpg" class="img-fluid" alt="suite room">
+                        </div>
+                        <div class="col-md-8">
+                            <div id="room_info_content3" class="card-body room_info_content">
+                                <h5 class="card-title">스위트룸</h5>
+                                <p class="card-text">가격<span>ㅇㅇㅇㅇ원 / 1박</span></p>
+                                <p id="pay_btn3" class="card-text"><button type="button" class="btn btn-outline-primary btn-sm">예약하기</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // 하단 내용 -->
+        </div>
+    </div>
+</div>
+</body>
+</html>
