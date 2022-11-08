@@ -17,6 +17,9 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+#stay_select > option:hover {
+    background-color: #48a9ed;
+}
 .stay_search_area > label {
     position: relative;
     display: inline-block;
@@ -24,7 +27,7 @@
 span.cal, span.users, span.bed {
     color: #333;
     position: absolute;
-    top: 9px;
+    top: 10px;
     left: 15px;
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
@@ -33,7 +36,7 @@ span.cal, span.users, span.bed {
     -o-transform: scale(1.1);
 }
 span.users {
-    left: 30px;
+    left: 25px;
 }
 span.bed {
     color: rgba(51, 51, 51, 0.836);

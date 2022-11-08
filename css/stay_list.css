@@ -7,7 +7,7 @@
     position: sticky;
 }
 .map_area {
-    padding: 10px 0 ;
+    padding: 10px 0 10px 10px;
 }
 .map {
     width: 95%;
@@ -20,15 +20,19 @@
     -o-border-radius: 7px;
 }
 div[class $= "condition"] > h3 {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
     color: #444;
 }
 div[class $= "condition"] {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0 30px 0;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0 30px 10px;
 }
 
-/*라디오 버튼 커스텀 시작*/
+/*별점 조건*/
+.grade_condition > p {
+    padding: 5px 0;
+}
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
     position: absolute;
@@ -38,7 +42,7 @@ div[class $= "condition"] {
 [type="radio"]:not(:checked) + label
 {
     position: relative;
-    padding-left: 28px;
+    padding-left: 33px;
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
@@ -52,9 +56,13 @@ div[class $= "condition"] {
     top: 0;
     width: 18px;
     height: 18px;
-    border: 1px solid #ddd;
-    border-radius: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     background: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
@@ -65,9 +73,13 @@ div[class $= "condition"] {
     position: absolute;
     top: 4px;
     left: 4px;
-    border-radius: 100%;
+    border-radius: 3px;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
 [type="radio"]:not(:checked) + label:after {
     opacity: 0;
@@ -79,7 +91,132 @@ div[class $= "condition"] {
     -webkit-transform: scale(1);
     transform: scale(1);
 }
-/*라디오 버튼 커스텀 종료*/
+[type="radio"] + label > span {
+    color: rgb(255, 204, 0);
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+}
+[type="radio"] + label > span:last-child {
+    transform: scale(0.9);
+    color: #777;
+    margin-left: 5px;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+}
+.grade_condition input[type="radio"] + label:hover:before{
+    border-color: #48a9ed;
+}
+
+/*숙소 유형 조건*/
+.stay_type_condition > p {
+    padding: 6px 0;
+}
+.stay_type_condition > p > input[type="checkbox"] {
+    margin-right: 12px;
+    padding: 2px;
+}
+.stay_type_condition > p > label {
+    font-size: 1.05rem;
+}
+.stay_type_condition > p > label:hover {
+    color: #48a9ed;
+}
+.stay_type_condition > p:hover input{
+    color: #48a9ed;
+}
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 20px;
+    outline: 0;
+    width: 20px;
+}
+input[type="checkbox"]:hover {
+    border-color: #48a9ed;
+}
+input[type="checkbox"]::after {
+    border: solid #48a8ed;
+    border-width: 0 3px 3px 0;
+    content: '';
+    display: none;
+    height: 55%;
+    left: 31%;
+    position: relative;
+    top: 5%;
+    transform: rotate(45deg);
+    width: 20%;
+}
+input[type="checkbox"]:checked {
+    background: #fff;
+    border-color: #48a9ed;
+}
+input[type="checkbox"]:checked::after {
+    display: block;
+}
+
+/*숙소명 조건*/
+.stay_name_condition > label {
+    position: relative;
+}
+.stay_name_condition > label > span {
+    position: absolute;
+    left: 13px;
+    top: 6px;
+    color: #666;
+}
+.stay_name_condition input {
+    padding: 8px;
+    font-size: 1.1rem;
+    width: 70%;
+    padding-left: 40px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.stay_name_condition input:focus {
+    outline-color: #48a9ed;
+    border-color: #48a9ed;
+}
+
+/*검색버튼*/
+form[name="frm_stay_condition"] {
+    position: relative;
+    padding-top: 60px;
+}
+form > button#btn_conditions_search {
+    position: absolute;
+    top: 15px;
+    text-align: center;
+    width: 90%;
+    margin: 0 10px;
+    padding: 7px;
+    font-size: 1.1rem;
+    border: 2px solid #48a9ed;
+    outline: none;
+    background-color: #48a8ed16;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+form > button#btn_conditions_search:hover {
+    color: #f0f0f0;
+    background-color: #48a8ed;
+}
 
 /* 숙소 목록 영역 */
 #contents_area {
@@ -93,6 +230,7 @@ div[class $= "condition"] {
     top: 70px;
 }
 .stay_content {
+    position: relative;
     border: 1px solid #aaa;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -102,7 +240,7 @@ div[class $= "condition"] {
 }
 .stay_image {
     display: inline-block;
-    width: 30%;
+    width: 36%;
     height: 160px;
     background-color: #666;
     border-radius: 10px;
@@ -113,7 +251,37 @@ div[class $= "condition"] {
 }
 .stay_info {
     display: inline-block;
-    width: 65%;
+    width: 63%;
+    height: 160px;
     margin-left: 2%;
-
+    position: absolute;
+    top: 10px;
+    left: 38%;
 }
+.stay_info_l {
+    position: relative;
+    height: 90%;
+}
+.stay_info_l > h2 {
+    margin-bottom: 10px;
+}
+.stay_info_l > p:nth-child(2) {
+    color:#333;
+    margin-bottom: 45px;
+}
+.stay_info_l > p:last-child {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.stay_info_l > p:last-child > span {
+    font-size: 1.1rem;
+}
+/*.stay_info_l > p:last-child > span:first-child{
+    color: rgb(255, 204, 0);
+    transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+}*/
