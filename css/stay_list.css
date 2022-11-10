@@ -184,6 +184,10 @@ input[type="checkbox"]:checked::after {
 }
 
 /*숙소명 조건*/
+div.stay_name_condition {
+    margin-bottom: 50px;
+    border-bottom-color: #fff;
+}
 .stay_name_condition > label {
     position: relative;
 }
