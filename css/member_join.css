@@ -32,10 +32,9 @@ a.id_check {
     width: 18%;
     padding: 8px 0;
     font-size: 0.9rem;
-    background-color: #48a8ed1a;
-    border: 1px solid #48a8ed;
+    background-color: #48a8ed;
     border-radius: 3px;
-    color: #48a8ed;
+    color: #fff;
     border-radius: 3px;
     margin-left: 1%;
     -webkit-border-radius: 3px;
@@ -52,10 +51,9 @@ input.btn_send_code, input.btn_check_code {
     font-size: 0.8rem;
     padding: 0.6rem 0;
     border: none;
-    background-color: #48a8ed1a;
-    border: 1px solid #48a8ed;
+    background-color: #48a8ed;
     border-radius: 3px;
-    color: #48a8ed;
+    color: #fff;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;

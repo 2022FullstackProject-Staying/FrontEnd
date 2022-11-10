@@ -52,10 +52,10 @@
 }
 .stay_join_info_area > .stay_address_area > .address_input > input:nth-child(2) {
     width: 58%;
-    background-color: #48a8ed1a;
+    background-color: #48a8ed;
     border: 1px solid #48a8ed;
     border-radius: 3px;
-    color: #48a8ed;
+    color: #fff;
     font-size: 1rem;
     position: relative;
     top: 1px;
