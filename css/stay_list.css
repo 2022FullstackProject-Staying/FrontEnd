@@ -232,6 +232,7 @@ form > button#btn_conditions_search:hover {
 .stay_content {
     position: relative;
     border: 1px solid #aaa;
+    margin-bottom: 20px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -243,11 +244,8 @@ form > button#btn_conditions_search:hover {
     width: 36%;
     height: 160px;
     background-color: #666;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .stay_info {
     display: inline-block;

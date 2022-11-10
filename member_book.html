@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원정보</title>
+    <title>예약 정보</title>
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/member_common.css">
     <link rel="stylesheet" href="css/member_book.css">
+    <link rel="stylesheet" href="css/star.css">
 </head>
 <body>
     <div id="wrapper">
@@ -44,6 +45,7 @@
                         </div>
                         <div class="book_room_content">
                             <div class="book_room_l">
+                                <input type="hidden" name="room_book_num" value="">
                                 <p class="book_room_title">숙소 이름</p>
                                 <p class="book_room_name">방 이름</p>
                                 <table class="book_room_checktime">
@@ -75,16 +77,37 @@
                                 <div class="modal-body">
                                   <form>
                                     <div class="mb-3">
-                                        <label class="col-form-label">평점 </label>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>
-                                        <span class="fa fa-star"></span>
-                                        <input type="hidden" name="review_star" value="3">
+                                        <input name="book_num" type="hidden" value="">
+                                        <p class="star">평점 </p>
+                                        <div class="rate-area">
+                                            <input type="radio" id="5-star" name="review_star" value="5"> 
+                                            <label for="5-star"><span class="fa fa-star"></span></label>
+                                            <input type="radio" id="4-half-star" name="review_star" value="4.5"> 
+                                            <label for="4-half-star"><span class="half fa fa-star-half"></span></label>
+                                            
+                                            <input type="radio" id="4-star" name="review_star" value="4">
+                                            <label for="4-star"><span class="fa fa-star"></span></label>
+                                            <input type="radio" id="3-half-star" name="review_star" value="3.5">
+                                            <label for="3-half-star"><span class="half fa fa-star-half"></span></label>
+                                            
+                                            <input type="radio" id="3-star" name="review_star" value="3">
+                                            <label for="3-star"><span class="fa fa-star"></span></label>
+                                            <input type="radio" id="2-half-star" name="review_star" value="2.5">
+                                            <label for="2-half-star"><span class="half fa fa-star-half"></span></label>
+                                            
+                                            <input type="radio" id="2-star" name="review_star" value="2">
+                                            <label for="2-star"><span class="fa fa-star"></span></label>
+                                            <input type="radio" id="1-half-star" name="review_star" value="1.5">
+                                            <label for="1-half-star"><span class="half fa fa-star-half"></span></label>
+                                            
+                                            <input type="radio" id="1-star" name="review_star" value="1" aria-required="true">
+                                            <label for="1-star"><span class="fa fa-star"></span></label>
+                                            <input type="radio" id="0-half-star" name="review_star" value="0.5" aria-required="true">
+                                            <label for="0-half-star"><span class="half fa fa-star-half"></span></label>
+                                        </div>
                                     </div>
                                     <div class="mb-3">
-                                        <textarea class="form-control" name="review_content" id="message-text"></textarea>
+                                        <textarea class="form-control" name="review_content" id="message-text" maxlength="300"></textarea>
                                     </div>
                                     <div class="mb-3">
                                         <img src="${사진}" alt="">

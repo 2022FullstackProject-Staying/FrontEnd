@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>숙소 등록</title>
 
-    <!--주소 api-->
+    <!--주소 api
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=027377f54149e77d2c5a15096947dd45&libraries=services"></script>
     <script defer src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    <script src="js/address.js"></script>
+    <script src="js/address.js"></script>-->
 
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/business_stay_join.css">
 </head>
 <body>
     <!--건너뛰기 링크-->
@@ -22,7 +23,7 @@
     <div id="wrapper">
         <!--컨텐츠 영역-->
         <div id="contents_area">
-            <form action="" name="frm_stay_join">
+            <form action="" name="frm_stay_join" id="frm_stay_join">
                 <h2 class="title">사업장 등록</h2>
                 <div class="stay_join_info_area">
                     <div class="stay_name_area">
@@ -31,31 +32,44 @@
                     </div>
                     <div class="stay_address_area">
                         <label for="postcode">시설 주소</label>
-                        <input type="text" name="postcode" id="postcode" placeholder="우편번호" disabled>
-                        <input type="button" onclick="fn_postcode()" value="우편번호 찾기"><br>
-                        <input type="text" name="roadAddress" id="roadAddress" placeholder="도로명주소" disabled>
-                        <input type="text" name="detailAddress" id="detailAddress" placeholder="상세주소">
-            
-                        <input type="hidden" name="latitude" id="latitude" value=""> <!--위도값-->
-                        <input type="hidden" name="longitude" id="longitude" value=""> <!--경도값-->
+                        <div class="address_input">
+                            <input type="text" name="postcode" id="postcode" placeholder="우편번호" disabled>
+                            <input type="button" onclick="fn_postcode()" value="우편번호 찾기">
+                            <input type="text" name="roadAddress" id="roadAddress" placeholder="도로명주소" disabled>
+                            <input type="text" name="detailAddress" id="detailAddress" placeholder="상세주소">
+                            
+                            <input type="hidden" name="latitude" id="latitude" value=""> <!--위도값-->
+                            <input type="hidden" name="longitude" id="longitude" value=""> <!--경도값-->
+                        </div>
                     </div>
                     <div class="stay_kind_area">
-                        <label for="stay_select">시설 종류</label>
-                        <select name="stay_select" id="stay_select">
-                            <option value="house">펜션</option>
-                            <option value="hotel">호텔</option>
-                            <option value="camping">캠핑장</option>
-                            <option value="hanok">한옥</option>
-                        </select>
+                        <!--
+                            <label for="stay_select">시설 종류</label>
+                            <select name="stay_select" id="stay_select">
+                                <option value="house">펜션</option>
+                                <option value="hotel">호텔</option>
+                                <option value="camping">캠핑장</option>
+                                <option value="hanok">한옥</option>
+                            </select>
+                        -->
+                        <label>시설 유형</label>
+                        <div class="radio_input">
+                            <input type="radio" name="stay_kind" id="house"> <label for="house">펜션</label>
+                            <input type="radio" name="stay_kind" id="hotel"> <label for="hotel">호텔</label>
+                            <input type="radio" name="stay_kind" id="hanok"> <label for="hanok">캠핑장</label>
+                            <input type="radio" name="stay_kind" id="camping"> <label for="camping">한옥</label>
+                        </div>
                     </div>
                     <div class="stay_content_area">
                         <label for="stay_content">시설 설명</label>
-                        <input type="text" name="stay_content" id="stay_content">
+                        <textarea type="text" name="stay_content" id="stay_content" maxlength="50"></textarea>
                     </div>
                     <div class="stay_image_area">
                         <label for="stay_image">대표 이미지</label>
-                        <input type="file" name="stay_image" id="stay_image">
-                        <img src="" alt="">
+                        <div class="image_area">
+                            <input type="file" name="stay_image" id="stay_image">
+                            <img src="images/logocap.png" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="btn_area">
