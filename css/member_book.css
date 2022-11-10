@@ -1,3 +1,12 @@
+*, ::after, ::before {
+    box-sizing: content-box;
+}
+.mypage_menu_area {
+    padding-top: 156px;
+}
+.under_menu > li:first-child > a:hover {
+    color: #000;
+}
 .under_menu > li:last-child {
     width: 100%;
     border-left: 3px solid rgba(237, 56, 46, 0.918);
@@ -5,6 +14,9 @@
 }
 .under_menu > li:last-child a {
     color: rgba(237, 56, 46, 0.918);
+}
+.contents_info > h2 {
+    padding-top: 85px;
 }
 .book_room_area {
     width: 100%;
@@ -15,12 +27,14 @@
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
+    box-sizing: border-box;
 }
 .book_room_image {
     display: inline-block;
     width: 27%;
     height: 100px;
     background-color: #666;
+    
 }
 .book_room_content {
     display: inline-block;
@@ -116,4 +130,17 @@
 .no_room_content > a:hover {
     background-color: #48a8ed;
     color: #fff;
+}
+
+/*리뷰 모달*/
+.star {
+    float: left;  
+    padding: 5px 10px;  
+}
+.modal-body > form {
+    width: 95%;
+}
+.modal-body textarea {
+    resize: none;
+    height: 100px;
 }

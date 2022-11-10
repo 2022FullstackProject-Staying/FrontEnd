@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>검색 목록</title>
 
     <!--양 방향 슬라이드바-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" type="text/css" media="all" />
@@ -34,18 +34,16 @@
     <!--wraper 시작-->
     <div id="wrapper">
         
-
         <!--메인 검색 영역-->
         <form action="" name="frm_stay_search" class="stay_search_area">
             <label>
                 <span class="bed fa fa-bed" aria-hidden="true"></span>
-                <select name="stay_select" id="stay_select">
-                    <option value="default" class="hidden"></option>
-                    <option value="house">펜션</option>
-                    <option value="hotel">호텔</option>
-                    <option value="camping">캠핑장</option>
-                    <option value="hanok">한옥</option>
-                </select>
+                <ul name="stay_select" id="stay_select">
+                    <li value="house">펜션</li>
+                    <li value="hotel">호텔</li>
+                    <li value="hanok">한옥</li>
+                    <li value="camping">캠핑장</li>
+                </ul>
             </label>
             <label>
                 <span class="cal fa fa-calendar"></span>
@@ -147,7 +145,41 @@
                     <div class="stay_info">
                         <div class="stay_info_l">
                             <h2>숙소명</h2>
-                            <p>기준인원 <span id="room_person">2</span>인</p>
+                            <p>기준인원 <span class="room_person">2</span>인</p>
+                            <p>
+                                <span>별점</span>
+                                <span>가격</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stay_content">
+                    <div class="stay_image">
+                        <!--
+                            <img src="" alt="">
+                        -->
+                    </div>
+                    <div class="stay_info">
+                        <div class="stay_info_l">
+                            <h2>숙소명</h2>
+                            <p>기준인원 <span class="room_person">2</span>인</p>
+                            <p>
+                                <span>별점</span>
+                                <span>가격</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stay_content">
+                    <div class="stay_image">
+                        <!--
+                            <img src="" alt="">
+                        -->
+                    </div>
+                    <div class="stay_info">
+                        <div class="stay_info_l">
+                            <h2>숙소명</h2>
+                            <p>기준인원 <span class="room_person">2</span>인</p>
                             <p>
                                 <span>별점</span>
                                 <span>가격</span>

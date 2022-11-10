@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객실 정보</title>
+
+    <!--주소 api
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=027377f54149e77d2c5a15096947dd45&libraries=services"></script>
+    <script defer src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="js/address.js"></script>
+-->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/business_stay_join-table.css">
+</head>
+<body>
+    <!--건너뛰기 링크-->
+    <a id="skipNav" href="#contentsArea">본문 바로가기</a>
+    <!--건너뛰기 링크 종료-->
+
+    <!--wraper 시작-->
+    <div id="wrapper">
+        <!--컨텐츠 영역-->
+        <div id="contents_area">
+            <form action="" name="frm_stay_join" id="frm_stay_join">
+                <h2 class="title">사업장 등록</h2>
+                <table class="stay_join_info_tbl">
+                    <tbody>
+                        <tr class="stay_name_area">
+                            <td>
+                                <label for="stay_name">시설 명</label>
+                            </td>
+                            <td>
+                                <input type="text" name="stay_name" id="stay_name">
+                            </td>
+                        </tr>
+                        <tr class="child stay_address_area">
+                            <td rowspan="3">
+                                <label for="postcode">시설 주소</label>
+                            </td>
+                            <td>
+                                <input type="text" name="postcode" id="postcode" placeholder="우편번호" disabled>
+                                <input type="button" onclick="fn_postcode()" value="우편번호 찾기"><br>
+                            </td>
+                        </tr>
+                        <tr class="child">
+                            <td>
+                                <input type="text" name="roadAddress" id="roadAddress" placeholder="도로명주소" disabled>
+                            </td>
+                        </tr>
+                        <tr class="child">
+                            <td>
+                                <input type="text" name="detailAddress" id="detailAddress" placeholder="상세주소">
+                                <input type="hidden" name="latitude" id="latitude" value=""> <!--위도값-->
+                                <input type="hidden" name="longitude" id="longitude" value=""> <!--경도값-->
+                            </td>
+                        </tr>
+                        <tr class="stay_kind_area">
+                            <td>
+                                <label for="stay_kind">시설 종류</label>
+                            </td>
+                            <td>
+                                <ul name="stay_kind" id="stay_kind">
+                                    <li value="house">펜션</li>
+                                    <li value="hotel">호텔</li>
+                                    <li value="hanok">한옥</li>
+                                    <li value="camping">캠핑장</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="stay_content_area">
+                            <td>
+                                <label for="stay_content">시설 설명</label>
+                            </td>
+                            <td>
+                                <input type="text" name="stay_content" id="stay_content">
+                            </td>
+                        </tr>
+                        <tr class="stay_image_area child">
+                            <td rowspan="2">
+                                <label for="stay_image">대표 이미지</label>
+                            </td>
+                            <td>
+                                <input type="file" name="stay_image" id="stay_image">
+                            </td>
+                        </tr>
+                        <tr class="child">
+                            <td>
+                                <img src="" alt="">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btn_area">
+                    <button type="button">등록하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

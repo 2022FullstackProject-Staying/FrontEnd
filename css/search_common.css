@@ -1,15 +1,17 @@
 .stay_search_area {
-    width: 100%;
-    height: 40px;
+    display: flex;
     text-align: center;
+    justify-content: center;
+    height: 40px;
     padding: 20px 0;
     border-bottom: 1px solid #ddd;
 }
 #stay_select {
     width: 200px;
     height: 37px;
-    border: 1px solid #666;
-    margin-right: 10px;
+    border: 1px solid #999;
+    margin: 0;
+    margin-right: 15px;
     padding-left: 50px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -17,12 +19,22 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-#stay_select > option:hover {
-    background-color: #48a9ed;
+#stay_select > li {
+    padding-right: 10%;
+    height: 37px;
+    line-height: 2.4;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#stay_select > li:hover {
+    color: #38a1ec;
 }
 .stay_search_area > label {
     position: relative;
-    display: inline-block;
 }
 span.cal, span.users, span.bed {
     color: #333;
@@ -45,7 +57,7 @@ span.bed {
     width: 110px;
     height: 35px;
     text-align: center;
-    border: 1px solid #666;
+    border: 1px solid #999;
     padding-left: 30px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -53,12 +65,16 @@ span.bed {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+.stay_search_area > label > input.check_in {
+    margin-right: 5px;
+}
+
 .stay_search_area .stay_person {
     width: 110px;
     height: 35px;
     text-align: center;
     border: 1px solid #666;
-    margin-left: 10px;
+    margin-left: 15px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -68,7 +84,7 @@ span.bed {
 .btn_stay_search {
     width: 45px;
     height: 37px;
-    margin-left: 10px;
+    margin-left: 15px;
     background-color: #48a8ed10;
     border: 2px solid #48a8ed7e;
     border-radius: 5px;

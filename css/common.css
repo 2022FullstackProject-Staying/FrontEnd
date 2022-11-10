@@ -68,7 +68,7 @@ header{
 .logo {
     position: absolute;
     left: 20px;
-    top: 7px;
+    vertical-align:middle;
 }
 .logo img {
     height: 45px;
