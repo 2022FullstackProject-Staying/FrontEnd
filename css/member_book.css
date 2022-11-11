@@ -82,23 +82,28 @@
     text-align: right;
     font-size: 0.85rem;
 }
-.review_cancle_area a {
+.review_cancle_area > a {
     display: inline-block;
     margin-top: 20px;
     padding: 3px 5px;
     border-radius: 4px;
-    color: #30a379;
+    color: #121212;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
 }
 .review_cancle_area > a:first-child {
-    color: #30a379;
+    color: #121212;
     margin-right: 15px;
 }
+.review_cancle_area > a:first-child:hover {
+    color: #48a8ed;
+    text-decoration: underline;
+}
 .review_cancle_area > a:hover {
-    color: #121212f0;
+    color: #48a8ed;
+    text-decoration: underline;
 }
 .no_book_room {
     display: none;

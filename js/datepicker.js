@@ -1,5 +1,4 @@
 datePickerSet($("#datepicker1"), $("#datepicker2"), true); //다중은 시작하는 달력 먼저, 끝달력 2번째
-
 /*
     * 달력 생성기
     * @param sDate 파라미터만 넣으면 1개짜리 달력 생성
@@ -16,7 +15,7 @@ function datePickerSet(sDate, eDate, flag) {
     if (!isValidStr(sDate) && !isValidStr(eDate) && sDate.length > 0 && eDate.length > 0) {
         var sDay = sDate.val();
         var eDay = eDate.val();
-
+        console.log(sDay);
         if (flag && !isValidStr(sDay) && !isValidStr(eDay)) { //처음 입력 날짜 설정, update...			
             var sdp = sDate.datepicker().data("datepicker");
             sdp.selectDate(new Date(sDay.replace(/-/g, "/")));  //익스에서는 그냥 new Date하면 -을 인식못함 replace필요
