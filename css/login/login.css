@@ -32,15 +32,15 @@ html, body {
 }
 #login_form {
     text-align: center;
-    height: 200px;
+    height: 220px;
 }
 fieldset {
-    height: 200px;
+    height: 220px;
     border: none;
 }
 .title {
-    width: 4y0px;
-    height: 50px;
+    width: 400px;
+    height: 60px;
     margin-top: 15px;
 }
 .title > label {
@@ -51,8 +51,9 @@ fieldset {
     color: #777777;
 }
 .title > input {
-    width: 240px;
-    height: 21px;
+    width: 230px;
+    height: 30px;
+    padding-left: 10px;
 }
 fieldset > button {
     margin-top: 22px;
