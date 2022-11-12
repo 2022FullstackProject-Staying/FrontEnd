@@ -19,24 +19,87 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-#stay_select > li {
-    padding-right: 10%;
-    height: 37px;
-    line-height: 2.4;
-    letter-spacing: 2px;
+#stay_select button {
+    background-color: #fff;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+.toggle_btn {
+    width: 125%;
+    position: relative;
+    left: -50px;
+    text-align: right;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-#stay_select > li:hover {
+.toggle_btn > span {
+    display: inline-block;
+    width: 75%;
+    text-align: center;
+}
+#stay_select i.drop {
+    padding: 5px;
+    position: relative;
+    right: 10px;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+#stay_select > #select_option {
+    width: 125%;
+    position: relative;
+    left: -50px;
+    padding: 10px 0;
+    margin: 10px 0;
+    z-index: 90;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#stay_select > ul.hide {
+    display: none;
+}
+#stay_select > #select_option > li {
+    height: 37px;
+    line-height: 2.4;
+    letter-spacing: 2px;
+    margin: 5px 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#stay_select > #select_option > li > button {
+    width: 233px;
+    padding: 0 10px;
+    font-size: 0.9rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#stay_select #select_option > li > button:hover {
     color: #38a1ec;
+    border-color: #48a9ed;
 }
 .stay_search_area > label {
     position: relative;
 }
 span.cal, span.users, span.bed {
+    z-index: 100;
     color: #333;
     position: absolute;
     top: 10px;
