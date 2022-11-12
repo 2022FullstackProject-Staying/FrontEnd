@@ -93,11 +93,14 @@ span.bed {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-.btn_stay_search  > span {
+.saerch {
+    position: absolute;
+    top: 10px;
+    right: 14px;
     color: #48a9ed;
-    transform: scale(1.6);
-    -webkit-transform: scale(1.6);
-    -moz-transform: scale(1.6);
-    -ms-transform: scale(1.6);
-    -o-transform: scale(1.6);
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
 }

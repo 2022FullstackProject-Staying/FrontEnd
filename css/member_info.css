@@ -10,7 +10,7 @@
     border: 1px solid #ccc;
     padding-top: 20px;
 }
-#frm_member_info input {
+#frm_member_info input:not([type="button"]) {
     padding: 10px 13px;
     width: 45%;
     border-radius: 3px;
@@ -19,6 +19,9 @@
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
     border: 1px solid #999;
+}
+#frm_member_info input:disabled {
+    background-color: #eee;
 }
 #frm_member_info input:focus {
     outline: 1px solid #666;
@@ -38,7 +41,7 @@
 }
 .btn_mod {
     cursor: pointer;
-    padding: 7px 20px;
+    padding: 8px 25px;
     font-size: 0.9rem;
     font-weight: 600;
     color: #f0f0f0;

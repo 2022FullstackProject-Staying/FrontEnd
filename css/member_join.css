@@ -118,7 +118,7 @@ input[type="checkbox"]{
 .btn_join_area{
     padding: 30px 0;
 }
-.btn_join{
+.btn_join_area > .btn_join{
     border: none;
     background-color: #48a8ed;
     color: #fff;

@@ -106,7 +106,7 @@
 #frm_stay_join > .btn_area {
     padding-bottom: 30px;
 }
-#frm_stay_join > .btn_area > button {
+#frm_stay_join > .btn_area > input {
     font-size: 1.1rem;
     border: none;
     background-color: #48a8ed;

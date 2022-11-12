@@ -20,9 +20,10 @@
     margin-bottom: 10px !important;
 }
 .rate-area:not(:checked) > label:nth-child(4n) {
-    display: inline-block;
+    display: inline;
     position: relative;
-    left: 10px;
+    width: 11px;
+    left: 11px;
 }
 .rate-area > input:checked ~ label {
     color: rgb(255, 204, 0);
