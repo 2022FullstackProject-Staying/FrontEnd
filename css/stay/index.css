@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+html, body, div, header, footer, h1, h2, img, button, input, section, ul, li, address, span, p {
+    margin: 0;
+    padding: 0;
+}
+#controller, #best_hotel_wrap, #exhibition, #festival {
+    width: 960px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+main {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* 테스트  컨트롤러 이미지에 가리는용 */
+#container {
+    position: relative;
+    top: -80px;
+}
+
+/*메인 이미지 영역 시작*/
+#main_img {
+    width: 100%;
+    height: 350px;
+    text-align: center;
+}
+#main_img > img{
+    width: 100%;
+    height: 100%;
+}
+/*메인 이미지 영역 종료*/
+
+
+/*컨트롤러 영역 시작*/
+#controller {
+    width: 960px;
+}
+.controller_wrap {
+    margin-top: 12px;
+    height: 170px;
+    background-color: rgb(213, 239, 248);
+}
+.lodging_wrap{
+    height: 85px;
+}
+.icon:hover {
+    cursor: pointer;
+}
+.icon {
+    text-align: center;
+}
+.icon > img {
+    width: 40px;
+    height: 40px;
+    margin-top: 22.5px;
+}
+
+.date_wrap {
+    height: 85px;
+    border-top: 1px solid rgb(0, 0, 0, 0.18);
+}
+.date {
+    height: 30px;
+    margin-top: 27.5px;
+    text-align: center;
+    
+}
+.check_in, .check_out, .search {
+    border-radius: 3px;
+    border: 1px solid #999;
+    color: #777;
+    width: 150px;
+    height: 30px;
+
+    text-align: center;
+    margin-right: 15px;
+}
+.btn {
+    margin-top: -4px;
+    height: 28px;
+}
+/*컨트롤러 영역 종료*/
+
+
+/*인기숙소 영역 시작*/
+#best_hotel_wrap {
+    height: 325px;
+    margin-top: 70px;
+    overflow: hidden;
+}
+.best_hotel > h2, .best_guesthouse > h2, .best_camping > h2, .best_hanok > h2 {
+    height: 40px;
+    padding-left: 21px;
+    font-size: 21px;
+    font-weight: 500;
+}
+.room_pic {
+    width: 150px;
+    height: 165px;
+    margin: 0 auto;
+}
+.room_pic > img {
+    width: 150px;
+    height: 165px;
+    border-radius: 2px;
+}
+.room > p {
+    width: 150px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 13px;
+}
+.hotel_name, .guesthouse_name, .camping_name, .hanok_name {
+    font-weight: bold;
+}
+/*인기숙소 영역 종료*/
+
+
+#un_left {
+    margin-left: 4px;
+}
+/*공연/전시 영역 시작*/
+#exhibition {
+    width: 574px;
+    /*height: 230px;*/
+}
+/*
+.exhibition_wrap {
+    height: 230px;
+}*/
+.exhibition {
+    width: 180px;
+}
+.exhibition_pic {
+    width: 180px;
+    /*height: 165px;*/
+}
+.exhibition_pic > img {
+    width: 180px;
+    height: 245px;
+    /*height: 165px;*/
+    border-radius: 3px;
+}
+.exhibition > p {
+    width: 180px;
+    text-align: center;
+    font-size: 13px;
+    margin: 0;
+}
+.exhibition_name {
+    font-weight: bold;
+}
+/*공연/전시 영역 종료*/
+
+
+/*축제 영역 시작*/
+#festival {
+    width: 574px;
+    height: 230px;
+}
+.festival_wrap {
+    height: 230px;
+}
+.festival {
+    width: 180px;
+}
+.festival1_pic {
+    width: 180px;
+    height: 165px;
+}
+.festival > div > img {
+    width: 180px;
+    height: 165px;
+    border-radius: 3px;
+}
+.festival > p {
+    width: 180px;
+    text-align: center;
+    font-size: 13px;
+    margin: 0;
+}
+.festival_name {
+    font-weight: bold;
+}
+/*축제 영역 종료*/
+
+
+/* 인기 숙소, 공연/전시, 축제 공통 */
+article {
+    margin-bottom: 70px;
+}
+
+
+/* 우측 하단 */
+#place {
+    text-align: center;
+  /*  background-color: rgb(245, 245, 255);*/
+}
+#history, #landmark {
+    text-align: center;
+}
+#place > p, #history > p, #landmark > p {
+    margin-bottom: 5px;
+}
+.fa-thumbs-up {
+    color: #ee3366;
+   /* -webkit-text-stroke: 1px rgb(149, 146, 146); 글자 테두리 */
+}
+.fa-utensils {
+    color: #ee3366;
+}

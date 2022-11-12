@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+.stay_search_area {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #999;
+}
+#stay_select {
+    width: 200px;
+    height: 37px;
+    border: 1px solid #666;
+    margin-right: 10px;
+    padding-left: 50px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#stay_select > option:hover {
+    background-color: #48a9ed;
+}
+.stay_search_area > label {
+    position: relative;
+    display: inline-block;
+}
+span.cal, span.users, span.bed {
+    color: #333;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+span.users {
+    left: 25px;
+}
+span.bed {
+    color: rgba(51, 51, 51, 0.836);
+}
+.stay_search_area > label > input[type="text"] {
+    width: 110px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid #666;
+    padding-left: 30px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.stay_search_area .stay_person {
+    width: 110px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid #666;
+    margin-left: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.btn_stay_search {
+    width: 45px;
+    height: 37px;
+    margin-left: 10px;
+    background-color: #48a8ed10;
+    border: 2px solid #48a8ed7e;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.btn_stay_search  > span {
+    color: #48a9ed;
+    transform: scale(1.6);
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    -o-transform: scale(1.6);
+}
