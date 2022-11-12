@@ -39,7 +39,7 @@ html, body {
 .login {
     position: absolute;
     padding-top: 50px;
-    top: 140px;
+    top: 130px;
     height: 370px;
     background-color: #fff;
     border: 1px solid #bbb;
@@ -62,7 +62,7 @@ html, body {
 }
 #login_wrap > .login > h2 {
     position: absolute;
-    top: -70px;
+    top: -55px;
     width: 199px;
     padding: 17px 0;
     display: inline-block;
