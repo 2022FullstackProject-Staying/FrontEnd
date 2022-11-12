@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>숙소 정보</title>
     <!--공통 css-->
-    <link rel="stylesheet" href="css/common/common.css">
+    <link rel="stylesheet" href="css/stay/common.css">
     <!-- 숙소정보 페이지 css -->
-    <link rel="stylesheet" href="css/stay_info/stay_info.css">
+    <link rel="stylesheet" href="css/stay/stay_info.css">
     <!-- 스와이퍼 css, js -->
     <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="css/stay_info/stay_info_swiper.css">
+    <link rel="stylesheet" href="css/stay/stay_info_swiper.css">
     <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script defer src="js/stay_info/stay_info_swiper.js"></script>
+    <script defer src="js/stay/stay_info_swiper.js"></script>
     <!-- 아이콘 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- 부트스트랩 css -->
@@ -51,6 +51,14 @@
                 $('#click_review').show().siblings('div').hide();
                 $('#menu > div').css("font-weight", "normal");
                 $('#review').css("font-weight", "bold");
+            })
+        });
+
+        
+        $(function() {
+            var className = document.getElementsByClassName("amenitie");
+            $('.amenitie[0]').click(function() {
+                    $('.amenitie[0] > span').show();
             })
         });
     </script>
