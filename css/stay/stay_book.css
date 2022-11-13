@@ -36,7 +36,13 @@
     margin: 10px 0 10px 20px;
 }
 .name > input, .tel > input {
-    margin-left: 20px;
+    width: 175px;
+    height: 32px;
+    padding-left: 25px;
+}
+.name > i, .tel > i {
+    position: relative;
+    left: 25px;
 }
 .tel > label > span {
     margin-left: 20px;
@@ -205,10 +211,9 @@ input[type="checkbox"]{
 /* 우측 숙소 정보란 */
 #room_info {
     float: left;
-    margin-top: 40px;
     width: 360px;
     height: 580px;
-    border: 1px solid #777;
+    border: 1px solid rgb(180, 180, 180);
     border-radius: 3px;
 }
 .room_info_wrap {

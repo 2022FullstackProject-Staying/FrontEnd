@@ -1,4 +1,4 @@
-$('input[type=radio][name=flexRadioDefault]').on('click', function() {
+/*$('input[type=radio][name=flexRadioDefault]').on('click', function() {
 
     var chkValue = $('input[type=radio][name=flexRadioDefault]:checked').val();
 
@@ -9,4 +9,23 @@ $('input[type=radio][name=flexRadioDefault]').on('click', function() {
         $('.pay1').css('display', 'none');
         $('.pay2').css('display', 'block');
     }
-});
+});*/
+
+
+function loginCheck(){
+	if (document.login_form.name.value == ""){
+		alert("이름을 입력해 주세요.");
+		document.login_form.name.focus();
+		return false;
+	} else if (document.login_form.tel.value == ""){
+		alert("전화번호를 입력해주세요.");
+		document.login_form.tel.focus();
+		return false;
+	} else if(!clause_check.checked) {
+        alert("약관 동의를 체크해주세요.");
+        clause_check.focus();
+        return false;
+    }else {
+		return true;
+	}
+};
