@@ -98,6 +98,16 @@
 #room_info_content1 > p, #room_info_content2 > p, #room_info_content3 > p {
     margin-left: 15px;
 }
+.amenitie {
+    display: inline;
+    cursor: pointer;
+}
+.amenitie:hover {
+    color: red;
+}
+.amenitie:hover > span {
+    color: black;
+}
 .amenitie > span {
     display: inline-block;
     width: 345px;
