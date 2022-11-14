@@ -1,6 +1,7 @@
+@charset "utf-8";
+
 /*공통 적용*/
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-html, body, a, div, header, h1, nav, input, section, h2, form, label
+html, body, a, div, header, h1, nav, input, section, h2, form
 , p, button, span, table, td, tr, footer {
     margin: 0;
     padding: 0;
@@ -8,9 +9,6 @@ html, body, a, div, header, h1, nav, input, section, h2, form, label
 a{
     color: #000;
     text-decoration: none;
-}
-.hidden {
-    display: none;
 }
 .hidden, legend, caption {
     position: absolute;
@@ -22,13 +20,7 @@ ul{
 fieldset{
     border: 0;
 }
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-html, body, a, input {
-    font-family: 'Nanum Gothic', sans-serif;
-}
+
 /*건너뛰기 링크*/
 #skipNav{
     position: absolute;
@@ -50,9 +42,6 @@ header, footer, body, html, #wrapper{
     width: 100%;
     min-width: 960px;
 }
-body, html, #wrapper, #contents_area {
-    height: 100%;
-}
 #contents_area, #footer_inner{
     width: 960px;
     margin: 0 auto;
@@ -62,6 +51,7 @@ body, html, #wrapper, #contents_area {
  글 색: #eff500
  배경색: #48a9ed
 */
+
 /*header*/
 header{
     height: 60px;
@@ -71,36 +61,28 @@ header{
 .logo {
     position: absolute;
     left: 20px;
-    vertical-align:middle;
+    top: 7px;
 }
 .logo img {
     height: 45px;
 }
-header > nav{    
+header nav{    
     position: absolute;
     right: 20px;
     top: 13px;
 }
-header > nav .btn_login {
+nav .btn_login {
     color: #fff;
     padding: 5px 15px;
     border: none;
     background-color: #48a9ed;
 }
 
-
-/*컨텐츠 영역 시작*/
-#contentsArea{
-    min-width: 960px;
-    background-color: #fff;
-    /* overflow: hidden; */
-}
-
 /*footer 영역 시작*/
 footer {
     border-top: 1px solid #ccc;
     background-color: #fff;
-    color: #888;
+    color: #aaa;
     height: 250px;
 }
 #footer_inner {
@@ -132,5 +114,5 @@ footer {
 }
 .cs_info_area .cs_info tr td:first-child {
     font-weight: 600;
-    color: #aaa;
+    color: #ccc;
 }
