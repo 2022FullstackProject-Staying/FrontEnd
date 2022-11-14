@@ -1,6 +1,6 @@
 function clause_show() {
     let body_clause = document.querySelector(".body_clause");
-
+    console.log(body_clause.style.display)
     if(body_clause.style.display === 'none'){
         $(".body_clause").slideDown();
         document.querySelector(".more_icon").style.transform = 'rotate(180deg)';
