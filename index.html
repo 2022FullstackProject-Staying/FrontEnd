@@ -30,28 +30,26 @@
     <!-- 아이콘 클릭시 input(숙소유형)에 이름 -->
     <script>
         function fn_search_submit () {
-    const frm = document.frm_stay_search;
-
-    if(frm.selected.value === "none") {
-        alert("숙소 유형을 선택해주세요")
-        return false;
-    }
-    if(frm.check_in.value === "" || frm.check_in.value.length === 0) {
-        alert("체크인 날짜를 입력해주세요");
-        return false;
-    }
-    if(frm.check_out.value === "" || frm.check_out.value.length === 0) {
-        alert("체크아웃 날짜를 입력해주세요");
-        return false;
-    }
-    if(frm.stay_person.value === "" || frm.stay_person.value.length === 0) {
-        alert("인원수를 입력해주세요");
-        frm.stay_person.focus();
-        return false;
-    }
-
-    frm.submit();
-}
+            const frm = document.frm_stay_search;
+            if(frm.selected.value === "none") {
+                alert("숙소 유형을 선택해주세요")
+                return false;
+            };
+            if(frm.check_in.value === "" || frm.check_in.value.length === 0) {
+                alert("체크인 날짜를 입력해주세요");
+                return false;
+            };
+            if(frm.check_out.value === "" || frm.check_out.value.length === 0) {
+                alert("체크아웃 날짜를 입력해주세요");
+                return false;
+            };
+            if(frm.stay_person.value === "" || frm.stay_person.value.length === 0) {
+                alert("인원수를 입력해주세요");
+                frm.stay_person.focus();
+                return false;
+            };
+            frm.submit();
+        };
     </script>
 </head>
 <body>
@@ -115,7 +113,7 @@
                             <div class="controller_wrap card shadow-sm">
                                 <div class="row lodging_wrap">
                                     <div class="col icon1 icon">
-                                        <img id="houseIcon" src="images/Home/themeIcons/house_select.png" alt="house_icon">
+                                        <img id="pensionIcon" src="images/Home/themeIcons/house_select.png" alt="pension_icon">
                                     </div>
                                     <div class="col icon2 icon">
                                         <img id="hotelIcon" src="images/Home/themeIcons/hotel.png" alt="hotel_icon">
@@ -151,7 +149,7 @@
                                     </label>
                                     <label>
                                         <span class="users fa fa-users" aria-hidden="true"></span>
-                                        <input type="text" class="stay_person" name="stay_person" placeholder="인원수">
+                                        <input type="text" class="stay_person" name="stay_person" placeholder="인원수"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" >
                                     </label>
                                     <button type="button" class="btn_stay_search" onclick="fn_search_submit()"><span class=" saerch fa fa-search" aria-hidden="true"></span></button>
                                 </form>
@@ -164,45 +162,45 @@
                     <div class="col-12">
                         <div id="best_hotel_wrap">
                             <!--인기 펜션-->
-                            <div class="best_guesthouse row">
-                                <h2 class="mb-4">인기 게스트하우스</h2>
+                            <div class="best_pension row">
+                                <h2 class="mb-4">인기 펜션</h2>
                                 <div class="room col">
                                     <div class="room_pic">
-                                        <img src="images/Home/best_room/Jeonju Galleria Stay.jpg" alt="guesthouse_pic">
+                                        <img src="images/Home/best_room/Jeonju Galleria Stay.jpg" alt="pension_pic">
                                     </div>
-                                    <p class="guesthouse_name">전주 갤러리스테이</p>
+                                    <p class="pension_name">전주 갤러리스테이</p>
                                     <p>전북 전주시 완산구<br>동문길 54-23</p>
                                     <p>70,000원</p>
                                 </div>
                                 <div class="room col">
                                     <div class="room_pic">
-                                        <img src="images/Home/best_room/24 Guest House Jeonju.jpg" alt="guesthouse_pic">
+                                        <img src="images/Home/best_room/24 Guest House Jeonju.jpg" alt="pension_pic">
                                     </div>
-                                    <p class="guesthouse_name">24게스트하우스 전주점</p>
+                                    <p class="pension_name">24게스트하우스 전주점</p>
                                     <p>전북 전주시 완산구<br>현무3길 56</p>
                                     <p>50,000원</p>
                                 </div>
                                 <div class="room col">
                                     <div class="room_pic">
-                                        <img src="images/Home/best_room/Jeonju Way Guest House.jpg" alt="guesthouse_pic">
+                                        <img src="images/Home/best_room/Jeonju Way Guest House.jpg" alt="pension_pic">
                                     </div>
-                                    <p class="guesthouse_name">전주 웨이게스트하우스</p>
+                                    <p class="pension_name">전주 웨이게스트하우스</p>
                                     <p>전북 전주시 완산구<br>은행로 16</p>
                                     <p>50,000원</p>
                                 </div>
                                 <div class="room col">
                                     <div class="room_pic">
-                                        <img src="images/Home/best_room/Jeonju RGB Guest House.jpg" alt="guesthouse_pic">
+                                        <img src="images/Home/best_room/Jeonju RGB Guest House.jpg" alt="pension_pic">
                                     </div>
-                                    <p class="guesthouse_name">전주 RGB 게스트하우스</p>
+                                    <p class="pension_name">전주 RGB 게스트하우스</p>
                                     <p>위전북 전주시 완산구<br>전주천동로 86-1</p>
                                     <p>55,000원</p>
                                 </div>
                                 <div class="room col">
                                     <div class="room_pic">
-                                        <img src="images/Home/best_room/Jeonju Dowon Guesthouse.jpg" alt="guesthouse_pic">
+                                        <img src="images/Home/best_room/Jeonju Dowon Guesthouse.jpg" alt="pension_pic">
                                     </div>
-                                    <p class="guesthouse_name">전주 도원 게스트하우스</p>
+                                    <p class="pension_name">전주 도원 게스트하우스</p>
                                     <p>전북 전주시 완산구<br>팔달로 58-3</p>
                                     <p>60,000원</p>
                                 </div>
@@ -418,8 +416,8 @@
                         <!-- 우측 인기차트? 영역 -->
                         <div class="col-md-4">
                             <div id="event_wrap">
-                                <div class="mb-3 rounded" id="place">
-                                    <h5>이벤트</h5>
+                                <div class="mb-3 rounded" id="bt_event">
+                                    <h5 class="pb-4 mb-4 border-bottom">이벤트</h5>
                                     <img src="images/Home/event/event1.png" alt="event">
                                     <!-- <h5><span class="fa fa-thumbs-up"></span> 인기! 관광명소</h5>
                                     <p>전주 한옥마을</p>
@@ -428,7 +426,7 @@
                                     <p>오목대 이목대</p>
                                     <p>남부시장</p> -->
                                 </div>
-                                <div class="mb-3" id="history">
+                                <div class="mb-3">
                                     <img src="images/Home/event/event2.png" alt="event">
                                    <!-- <h5><span class="fa fa-utensils"></span> 추천! 인기맛집</h5>
                                     <p>연식당</p>
@@ -437,7 +435,7 @@
                                     <p>교동석갈비</p>
                                     <p>고궁</p> -->
                                 </div>
-                                <div class="mb-3" id="landmark">
+                                <div class="mb-3">
                                     <img src="images/Home/event/event3.png" alt="event">
                                    <!-- <h5>즐길거리 & 랜드마크</h5>
                                     <p>전주 한옥마을</p>
@@ -445,6 +443,9 @@
                                     <p>자만 벽화마을</p>
                                     <p>전주소리문화관</p>
                                     <p>전주한옥생활체험관</p> -->
+                                </div>
+                                <div class="mb-3">
+                                    <img src="images/Home/event/event4.png" alt="event">
                                 </div>
                             </div>
                         </div>
