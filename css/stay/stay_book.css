@@ -2,11 +2,9 @@
 
 
 /* 좌측 예약자, 결제 정보란 */
-#contentsArea {
-    height: 750px;
+#contents_area {
     margin-top: 80px;
 }
-
 
 #info {
     float: left;

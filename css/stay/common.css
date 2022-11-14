@@ -42,7 +42,7 @@ header, footer, body, html, #wrapper{
     width: 100%;
     min-width: 960px;
 }
-#contentsArea, #footer_inner{
+#contents_area, #footer_inner{
     width: 960px;
     margin: 0 auto;
 }
