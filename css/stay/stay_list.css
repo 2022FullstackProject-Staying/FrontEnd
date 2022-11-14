@@ -241,6 +241,57 @@ form > button#btn_conditions_search:hover {
     background-color: #48a8ed;
 }
 
+/*지도 모달*/
+.map_modal_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .map_modal_wrap .map_bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .map_content {
+    text-align: right;
+    position: absolute;
+    background-color: #fff;
+    width: 80%;
+    height: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.map_content > .btn_map_close {
+    position: relative;
+    top: -50px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+.map_content > .btn_map_close > i {
+    background-color: none;
+    transform: scale(1.7);
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -ms-transform: scale(1.7);
+    -o-transform: scale(1.7);
+    color: #fff;
+}
+  .hidden {
+    display: none;
+  }
+
 /* 숙소 목록 영역 */
 #contents_area {
     position: relative;
@@ -253,6 +304,8 @@ form > button#btn_conditions_search:hover {
     top: 70px;
 }
 .stay_content {
+    display: block;
+    
     position: relative;
     border: 1px solid #aaa;
     margin-bottom: 20px;

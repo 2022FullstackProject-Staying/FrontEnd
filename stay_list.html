@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +15,7 @@
 
     <!--아이콘-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    
     <!--달력-->
     <link rel="stylesheet" href="css/stay/datepicker.min.css">
     <script src="js/stay/datepicker.min.js"></script>
@@ -23,6 +24,7 @@
 
     <!--숙소 유형-->
     <script src="js/stay/search_common.js"></script>
+    <script src="js/stay/stay_list_map.js"></script>
 
     <link rel="stylesheet" href="css/stay/common.css">
     <link rel="stylesheet" href="css/stay/search_common.css">
@@ -32,10 +34,22 @@
     <!--건너뛰기 링크-->
     <a id="skipNav" href="#contentsArea">본문 바로가기</a>
     <!--건너뛰기 링크 종료-->
-
+    
+    
+    
+    
     <!--wraper 시작-->
     <div id="wrapper">
-        
+
+        <!--지도 모달-->
+        <div class="map_modal_wrap hidden">
+            <div class="map_bg"></div>
+            <div class="map_content">
+                <button class="btn_map_close"><i class="fas fa-times"></i></button>
+                <div id="map_main"></div>
+            </div>
+        </div>
+
         <!--메인 검색 영역-->
         <form action="" name="frm_stay_search" class="stay_search_area">
             <label>
@@ -68,7 +82,7 @@
                 <input type="text" class="stay_person" name="stay_person" placeholder="인원수">
             </label>
             <label>
-                <input type="button" class="btn_stay_search" onclick="fn_search_submit()"><span class="saerch fa fa-search" aria-hidden="true"></span>
+                <input type="button" class="btn_stay_search"><span class="saerch fa fa-search" aria-hidden="true"></span>
             </label>
         </form>
         <!--컨텐츠 영역-->
@@ -76,13 +90,13 @@
             <!--조건, 지도 영역-->
             <section class="conditions_map_area">
                 <div class="map_area">
-                    <div class="map" id="map">
+                    <button class="map" id="map">
                         <img src="images/stay/map.svg" alt="지도 버튼 배경 이미지">
                         <div>
                             <img src="images/stay/map-pin-red.svg" alt="지도 마커 이미지">
                             <p>지도에 표시</p>
                         </div>
-                    </div>
+                    </button>
                 </div>
                 <div class="conditions_form_area">
                     <form action="" name="frm_stay_condition">
@@ -141,6 +155,7 @@
                                 <input type="checkbox" name="camping" id="camping"><label for="camping">캠핑장</label>
                             </p>
                         </div>
+                        <!--
                         <div class="stay_name_condition">
                             <h3>숙소명</h3>
                             <label for="input_stay_name">
@@ -148,13 +163,14 @@
                                 <input type="text" name="input_stay_name" id="input_stay_name" placeholder="숙소명">
                             </label>
                         </div>
+                        -->
                         <button type="submit" name="btn_conditions_search"  id="btn_conditions_search">검색하기</button>
                     </form>
                 </div>
             </section>
             <!--숙소 목록 영역-->
             <section class="stay_list_area">
-                <div class="stay_content">
+                <a class="stay_content" href="#">
                     <div class="stay_image">
                         <!--
                             <img src="" alt="">
@@ -170,8 +186,8 @@
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="stay_content">
+                </a>
+                <a class="stay_content" href="#">
                     <div class="stay_image">
                         <!--
                             <img src="" alt="">
@@ -187,8 +203,8 @@
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="stay_content">
+                </a>
+                <a class="stay_content" href="#">
                     <div class="stay_image">
                         <!--
                             <img src="" alt="">
@@ -204,7 +220,7 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </a>
             </section>
         </div>
     </div>
