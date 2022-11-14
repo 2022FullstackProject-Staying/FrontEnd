@@ -142,7 +142,8 @@
     float: left;  
     padding: 5px 10px;  
 }
-.modal-body > form {
+
+.modal-dialog form {
     width: 95%;
 }
 .modal-body textarea {

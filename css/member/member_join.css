@@ -14,7 +14,8 @@
     font-size: 1.7rem;
 }
 .frm_input_area  input {
-    padding: 5px 13px;
+    font-size: 1.05rem;
+    padding: 7px 13px;
     width: 60%;
 }
 .frm_input_area > p {
@@ -30,7 +31,7 @@ label[for="id"], label[for="name"] {
 a.id_check {
     display: inline-block;
     width: 18%;
-    padding: 8px 0;
+    padding: 10.5px 0;
     font-size: 0.9rem;
     background-color: #48a8ed;
     border-radius: 3px;
@@ -49,7 +50,7 @@ input.input_phone, input.input_check_code {
 input.btn_send_code, input.btn_check_code {
     width: 23%;
     font-size: 0.8rem;
-    padding: 0.6rem 0;
+    padding: 11px 0;
     border: none;
     background-color: #48a8ed;
     border-radius: 3px;
@@ -63,42 +64,49 @@ input.btn_send_code, input.btn_check_code {
 
 .clause_area {
     width: 65%;
-    margin: 0 auto;
+    margin: 25px auto 0;
+}
+.btn_clause {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+.btn_clause > p {
+    text-align: left;
+    width: 50%;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.btn_clause > p > label {
+    position: relative;
+    top: -5px;
 }
 input[type="checkbox"]{
     zoom: 1.5;
     width: auto;
     margin: 1%;
 }
+.btn_clause > button {
+    background-color: #fff;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+.btn_clause > button > .more_icon {
+    color: #333;
+}
 .clause_check_label {
     margin-left: 2%;
 }
+.body_clause {
+    margin: 20px 10px 10px;
+}
 
-.accordion{
-    --bs-accordion-btn-focus-border-color: none;
-    --bs-accordion-btn-focus-box-shadow: none;
-}
-.accordion-item:first-of-type .accordion-button, .accordion-item:last-of-type {
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-}
-.accordion-button:not(.collapsed) {
-    color: #000;
-    background-color: #fff;
-    box-shadow: none;
-}
-.accordion-button {
-    padding: 10px 13px;
-}
-.accordion-button:focus, .accordion-collapse:focus, .accordion-item{
-    border: none;
-}
-.accordion-body{
-    padding: 5px 13px;
-}
 
 .clause_content {
     height: 70px;
@@ -122,7 +130,7 @@ input[type="checkbox"]{
     border: none;
     background-color: #48a8ed;
     color: #fff;
-    padding: 10px 40px;
+    padding: 11px 40px;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
