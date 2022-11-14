@@ -13,12 +13,14 @@
 
 
 function loginCheck(){
-	if (document.login_form.name.value == ""){
+	if (document.login_form.name.value.trim() == ""){
 		alert("이름을 입력해 주세요.");
+        document.login_form.name.value = "";
 		document.login_form.name.focus();
 		return false;
-	} else if (document.login_form.tel.value == ""){
+	} else if (document.login_form.tel.value.trim() == ""){
 		alert("전화번호를 입력해주세요.");
+        document.login_form.tel.value = "";
 		document.login_form.tel.focus();
 		return false;
 	} else if(!clause_check.checked) {
