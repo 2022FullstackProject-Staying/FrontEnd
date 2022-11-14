@@ -5,7 +5,7 @@ $(function() {
         $('#hotelIcon').attr('src', 'images/Home/themeIcons/hotel.png');
         $('#campingIcon').attr('src', 'images/Home/themeIcons/camping.png');
         $('#hanokIcon').attr('src', 'images/Home/themeIcons/hanok.png');
-        $('#stay_select').attr("value", "펜션");
+        $('#selected').attr("value", "펜션");
     })
 });
 $(function() {
@@ -15,7 +15,7 @@ $(function() {
         $('#hotelIcon').attr('src', 'images/Home/themeIcons/hotel_select.png');
         $('#campingIcon').attr('src', 'images/Home/themeIcons/camping.png');
         $('#hanokIcon').attr('src', 'images/Home/themeIcons/hanok.png');
-        $('#stay_select').attr("value", "호텔");
+        $('#selected').attr("value", "호텔");
     })
 });
 $(function() {
@@ -25,7 +25,7 @@ $(function() {
         $('#hotelIcon').attr('src', 'images/Home/themeIcons/hotel.png');
         $('#campingIcon').attr('src', 'images/Home/themeIcons/camping_select.png');
         $('#hanokIcon').attr('src', 'images/Home/themeIcons/hanok.png');
-        $('#stay_select').attr("value", "캠핑장");
+        $('#selected').attr("value", "캠핑장");
     })
 });
 $(function() {
@@ -35,6 +35,6 @@ $(function() {
         $('#hotelIcon').attr('src', 'images/Home/themeIcons/hotel.png');
         $('#campingIcon').attr('src', 'images/Home/themeIcons/camping.png');
         $('#hanokIcon').attr('src', 'images/Home/themeIcons/hanok_select.png');
-        $('#stay_select').attr("value", "한옥");
+        $('#selected').attr("value", "한옥");
     })
 });
