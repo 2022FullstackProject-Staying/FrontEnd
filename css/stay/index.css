@@ -67,11 +67,12 @@ main {
     border-radius: 3px;
     border: 1px solid #999;
     color: #777;
-    width: 150px;
     height: 30px;
-
     text-align: center;
     margin-right: 15px;
+}
+#datepicker1, #datepicker2 {
+    width: 150px;
 }
 .btn {
     margin-top: -4px;
@@ -86,7 +87,7 @@ main {
     margin-top: 70px;
     overflow: hidden;
 }
-.best_hotel > h2, .best_guesthouse > h2, .best_camping > h2, .best_hanok > h2 {
+.best_hotel > h2, .best_pension > h2, .best_camping > h2, .best_hanok > h2 {
     height: 40px;
     padding-left: 21px;
     font-size: 21px;
@@ -109,7 +110,7 @@ main {
     margin-top: 5px;
     font-size: 13px;
 }
-.hotel_name, .guesthouse_name, .camping_name, .hanok_name {
+.hotel_name, .pension_name, .camping_name, .hanok_name {
     font-weight: bold;
 }
 /*인기숙소 영역 종료*/
@@ -191,17 +192,11 @@ article {
 
 
 /* 우측 하단 */
-#place, #history, #landmark {
-    text-align: center;
-    
-}
 #event_wrap img {
     width: 264px;
-    
-
+    margin-bottom: 19px;
+    border-radius: 5px;
 }
-
-
 
 
 
