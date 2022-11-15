@@ -1,33 +1,105 @@
-@charset "utf-8";
-
 .stay_search_area {
-    width: 100%;
-    height: 70px;
+    display: flex;
     text-align: center;
+    justify-content: center;
+    height: 40px;
     padding: 20px 0;
-    border-top: 1px solid #999;
+    border-bottom: 1px solid #ddd;
 }
-#stay_select, #selected {
+#stay_select {
     width: 200px;
     height: 37px;
-    border: 1px solid #666;
-    margin-right: 10px;
+    border: 1px solid #999;
+    margin: 0;
+    margin-right: 15px;
     padding-left: 50px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    background-color: white;
 }
-#stay_select > option:hover {
-    background-color: #48a9ed;
+#stay_select button {
+    background-color: #fff;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+.toggle_btn {
+    width: 125%;
+    position: relative;
+    left: -50px;
+    text-align: right;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.toggle_btn > span {
+    display: inline-block;
+    width: 75%;
+    text-align: center;
+}
+#stay_select i.drop {
+    padding: 5px;
+    position: relative;
+    right: 10px;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
+}
+#stay_select > #select_option {
+    width: 125%;
+    position: relative;
+    left: -50px;
+    padding: 10px 0;
+    margin: 10px 0;
+    z-index: 90;
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#stay_select > ul.hide {
+    display: none;
+}
+#stay_select > #select_option > li {
+    height: 37px;
+    line-height: 2.4;
+    letter-spacing: 2px;
+    margin: 5px 0;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#stay_select > #select_option > li > button {
+    width: 233px;
+    padding: 0 10px;
+    font-size: 0.9rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#stay_select #select_option > li > button:hover {
+    color: #38a1ec;
+    border-color: #48a9ed;
 }
 .stay_search_area > label {
     position: relative;
-    display: inline-block;
 }
 span.cal, span.users, span.bed {
+    z-index: 100;
     color: #333;
     position: absolute;
     top: 10px;
@@ -48,7 +120,7 @@ span.bed {
     width: 110px;
     height: 35px;
     text-align: center;
-    border: 1px solid #666;
+    border: 1px solid #999;
     padding-left: 30px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -56,12 +128,16 @@ span.bed {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+.stay_search_area > label > input.check_in {
+    margin-right: 5px;
+}
+
 .stay_search_area .stay_person {
     width: 110px;
     height: 35px;
     text-align: center;
     border: 1px solid #666;
-    margin-left: 10px;
+    margin-left: 15px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -71,7 +147,7 @@ span.bed {
 .btn_stay_search {
     width: 45px;
     height: 37px;
-    margin-left: 10px;
+    margin-left: 15px;
     background-color: #48a8ed10;
     border: 2px solid #48a8ed7e;
     border-radius: 5px;
@@ -80,11 +156,14 @@ span.bed {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-.btn_stay_search  > span {
+.saerch {
+    position: absolute;
+    top: 10px;
+    right: 14px;
     color: #48a9ed;
-    transform: scale(1.6);
-    -webkit-transform: scale(1.6);
-    -moz-transform: scale(1.6);
-    -ms-transform: scale(1.6);
-    -o-transform: scale(1.6);
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
 }
