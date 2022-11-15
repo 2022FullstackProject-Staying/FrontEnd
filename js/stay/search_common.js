@@ -16,6 +16,15 @@ function fn_show_ul (){
 function fn_option_select (obj){
     document.querySelector(".selected_option").innerText = obj.innerText;
     document.querySelector("#selected").value = obj.value;
+    if(document.querySelectorAll(".stay_kind").length >= 0) {
+        let stay_kind = document.querySelectorAll(".stay_kind");
+        for(let i=0; i<stay_kind.length; i++){
+            if( stay_kind[i].getAttribute("value") == obj.value ) {
+                stay_kind[i].setAttribute("checked", "checked");
+                break;
+            }
+        }
+    }
     fn_show_ul();
 }
 

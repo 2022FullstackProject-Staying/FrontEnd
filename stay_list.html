@@ -24,6 +24,7 @@
 
     <!--숙소 유형-->
     <script src="js/stay/search_common.js"></script>
+    <script src="js/stay/stay_list.js"></script>
 
     <!--지도
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=027377f54149e77d2c5a15096947dd45"></script>
@@ -85,7 +86,7 @@
                 <input type="text" class="stay_person" name="stay_person" placeholder="인원수">
             </label>
             <label>
-                <input type="button" class="btn_stay_search"><span class="saerch fa fa-search" aria-hidden="true"></span>
+                <input type="button" class="btn_stay_search" onclick="fn_search_submit()"><span class="saerch fa fa-search" aria-hidden="true"></span>
             </label>
         </form>
         <!--컨텐츠 영역-->
@@ -146,16 +147,20 @@
                         <div class="stay_type_condition">
                             <h3>숙소 유형</h3>
                             <p>
-                                <input type="checkbox" name="house" id="house"><label for="house">펜션</label>
+                                <input type="radio" class="stay_kind" name="stay_kind" value="house" id="house" onclick="stay_kind_search(this)">
+                                <label for="house">펜션</label>
                             </p>
                             <p>
-                                <input type="checkbox" name="hotel" id="hotel"><label for="hotel">호텔</label>
+                                <input type="radio" class="stay_kind" name="stay_kind" value="hotel" id="hotel" onclick="stay_kind_search(this)">
+                                <label for="hotel">호텔</label>
                             </p>
                             <p>
-                                <input type="checkbox" name="hanok" id="hanok"><label for="hanok">한옥</label>
+                                <input type="radio" class="stay_kind" name="stay_kind" value="hanok" id="hanok" onclick="stay_kind_search(this)">
+                                <label for="hanok">한옥</label>
                             </p>
                             <p>
-                                <input type="checkbox" name="camping" id="camping"><label for="camping">캠핑장</label>
+                                <input type="radio" class="stay_kind" name="stay_kind" value="camping" id="camping" onclick="stay_kind_search(this)">
+                                <label for="camping">캠핑장</label>
                             </p>
                         </div>
                         <!--
