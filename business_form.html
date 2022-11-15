@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객실정보</title>
+    <link rel="stylesheet" href="css/stay/common.css">
+    <link rel="stylesheet" href="css/business/business_form.css">
+
+    <script src="js/business/business_form.js"></script>
+</head>
+<body>
+    <!--수정, 추가 같은 폼 사용-->
+    <div id="wrapper">
+        <!--컨텐츠 영역-->
+        <div id="contents_area">
+            <div class="visual_image">
+                <!--
+                    <img src="" alt="숙소 대표 사진">
+                -->
+                <h2>숙소명</h2>
+            </div>
+            <section class="room_form_area">
+                <form action="" name="frm_room_info">
+                    <h2 class="hidden">숙소 방 수정 폼</h2>
+                    <div class="room_info">
+                        <div class="flex_area">
+                            <span class="label_name">
+                                <label for="room_image">객실사진</label>
+                            </span>
+                            <span class="label_content">
+                                <input type="file" name="room_image" id="room_image">
+                                <img src="images/logocap.png" alt="">
+                            </span>
+                        </div>
+                        <div>
+                            <span class="label_name">
+                                <label for="room_name">객실명</label>
+                            </span>
+                            <span class="label_content">
+                                <input type="text" name="room_name" id="room_name">
+                            </span>
+                        </div>
+                        <div>
+                            <span class="label_name">
+                                <label for="room_price">가격</label>
+                            </span>
+                            <span class="label_content">
+                                <input type="number" name="room_price" id="room_price">
+                            </span>
+                        </div>
+                        <div>
+                            <span class="label_name">
+                                <label for="room_per_num">인원</label>
+                            </span>
+                            <span class="label_content">
+                                <input type="number" name="room_per_num" id="room_per_num">
+                            </span>
+                        </div>
+                        <div class="flex_area">
+                            <span class="label_name">
+                                <label for="room_facility">편의시설</label>
+                            </span>
+                            <span class="label_content">
+                                <textarea name="room_facility" id="room_facility" maxlength="50"></textarea>
+                            </span>
+                        </div>
+                    </div>
+                    <input type="button" class="btn_info_save" value="저장하기" onclick="modify_info()">
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
