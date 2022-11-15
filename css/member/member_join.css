@@ -25,6 +25,7 @@ input#id {
     width: 40%;
 }
 label[for="id"], label[for="name"] {
+    display: inline-block;
     width: 14%;
     margin-right: 2%;
 }

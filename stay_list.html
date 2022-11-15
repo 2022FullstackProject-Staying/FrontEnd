@@ -24,7 +24,10 @@
 
     <!--숙소 유형-->
     <script src="js/stay/search_common.js"></script>
-    <script src="js/stay/stay_list_map.js"></script>
+
+    <!--지도
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=027377f54149e77d2c5a15096947dd45"></script>
+    <script src="js/stay/stay_list_map.js"></script>-->
 
     <link rel="stylesheet" href="css/stay/common.css">
     <link rel="stylesheet" href="css/stay/search_common.css">
@@ -40,7 +43,7 @@
     
     <!--wraper 시작-->
     <div id="wrapper">
-
+		
         <!--지도 모달-->
         <div class="map_modal_wrap hidden">
             <div class="map_bg"></div>
@@ -90,7 +93,7 @@
             <!--조건, 지도 영역-->
             <section class="conditions_map_area">
                 <div class="map_area">
-                    <button class="map" id="map">
+                    <button type="button" class="map" id="map" onclick='openModal(이름, 위도,경도)'>
                         <img src="images/stay/map.svg" alt="지도 버튼 배경 이미지">
                         <div>
                             <img src="images/stay/map-pin-red.svg" alt="지도 마커 이미지">
