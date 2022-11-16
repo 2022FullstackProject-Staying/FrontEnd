@@ -150,3 +150,7 @@
     resize: none;
     height: 100px;
 }
+.mb-3 > img {
+    width: 86%;
+    margin: 0 10% 15px;
+}
