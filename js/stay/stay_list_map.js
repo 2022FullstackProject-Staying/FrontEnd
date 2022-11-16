@@ -37,6 +37,8 @@ function view_map(stay_name, lat, lng) {
 		});
 	}
 	
+	var geocoder = new kakao.maps.services.Geocoder();
+	
 	for (let i = 0; i < positions.length; i ++) {
 	    let marker = new kakao.maps.Marker({
 	        map: map, 
@@ -51,49 +53,58 @@ function view_map(stay_name, lat, lng) {
 	    
 	    
 	    kakao.maps.event.addListener(marker, 'click', function() {
-	    	
-	        if (!selectedMarker || selectedMarker !== marker) {
-	            !!selectedMarker && infowindow.close();
-	        	
-	            infowindow.open(map, marker);
-	            
-	            var content = document.createElement('div');
-	    	    content.className="wrap"
-	    	    content.style.cssText = 'background: white; border: 1px solid black';
-	    	    
-	    	    var info = document.createElement('div');
-	    	    info.className="info";
-	    	    
-	    	    var title = document.createElement('div');
-	    	    title.innerHTML =  marker.getTitle();
-	    	    title.className="title";
-	    	    
-	    	    var closeBtn = document.createElement('button');
-	    	    closeBtn.innerHTML = '닫기';
-	    	    closeBtn.className = "close"
-	    	    closeBtn.onclick = function () {
-	    	    	infowindow.setMap(null);
-	    	    };
-	    	    
-	    	    var info_body = document.createElement('div');
-	    	    info_body.className = "info_body";
-	    	    var ellipsis = document.createElement('div');
-	    	    ellipsis.className = "ellipsis";
-	    	    
-	    	    info_body.appendChild(ellipsis);
-	    	    title.appendChild(closeBtn);
-	    	    info.appendChild(title);
-	    	    info.appendChild(info_body);
-	    	    content.appendChild(info);
-	    	    
-	    	    infowindow.setContent(content);
-	    	    
-	            //infowindow.setContent("<div>" + marker.getTitle() + "</div>");
-	        }
-	        selectedMarker = marker;
-	    });
+	    	searchDetailAddrFromCoords(positions[i].latlng, function(result, status) {
+		        if (status === kakao.maps.services.Status.OK) {
+		            var detailAddr = !!result[0].road_address ? '<div>' + result[0].road_address.address_name + '</div>' : '';
+		            
+			        if (!selectedMarker || selectedMarker !== marker) {
+			            !!selectedMarker && infowindow.close();
+			        	
+			            infowindow.open(map, marker);
+			            
+			            var content = document.createElement('div');
+			    	    content.className="wrap"
+			    	    content.style.cssText = 'background: white; border: 1px solid black';
+			    	    
+			    	    var info = document.createElement('div');
+			    	    info.className="info";
+			    	    
+			    	    var title = document.createElement('div');
+			    	    title.innerHTML =  marker.getTitle();
+			    	    title.className="title";
+			    	    
+			    	    var closeBtn = document.createElement('button');
+			    	    closeBtn.innerHTML = '닫기';
+			    	    closeBtn.className = "close"
+			    	    closeBtn.onclick = function () {
+			    	    	infowindow.setMap(null);
+			    	    };
+			    	    
+			    	    var info_body = document.createElement('div');
+			    	    info_body.className = "info_body";
+			    	    var ellipsis = document.createElement('div');
+			    	    ellipsis.innerHTML = !!result[0].road_address ? result[0].road_address.address_name: '';
+			    	    ellipsis.className = "ellipsis";
+			    	    
+			    	    info_body.appendChild(ellipsis);
+			    	    title.appendChild(closeBtn);
+			    	    info.appendChild(title);
+			    	    info.appendChild(info_body);
+			    	    content.appendChild(info);
+			    	    
+			    	    infowindow.setContent(content);
+			    	    
+			            //infowindow.setContent("<div>" + marker.getTitle() + "</div>");
+			        }
+			        selectedMarker = marker;
+		        }
+		   	})
+		});
 	}
 	
 	map.setBounds(bounds);
+	function searchDetailAddrFromCoords(coords, callback) {
+	    geocoder.coord2Address(coords.getLng(), coords.getLat(), callback);
+	}
 
 }
