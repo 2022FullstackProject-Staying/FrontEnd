@@ -6,10 +6,11 @@ html, body, a, div, header, h1, nav, input, section, h2, form
     margin: 0;
     padding: 0;
 }
-a{
+a, a:hover, a:focus, a:active {
     color: #000;
     text-decoration: none;
 }
+
 .hidden, legend, caption {
     position: absolute;
     left: -9999px;
@@ -74,11 +75,16 @@ header nav{
     right: 20px;
     top: 13px;
 }
-nav .btn_login {
+nav > a {
+    vertical-align: middle;
     color: #fff;
     padding: 5px 15px;
     border: none;
     background-color: #48a9ed;
+    text-decoration: none;
+}
+nav > a:hover {
+    color: #222;
 }
 
 /*footer 영역 시작*/
