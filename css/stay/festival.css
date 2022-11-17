@@ -21,12 +21,18 @@
     margin-top: 30px;
 }
 #menu_wrap > p {
+    text-align: center;
+    width: 100px;
     margin: 0;
     display: inline-block;
     padding: 10px;
     border-radius: 5px 5px 0 0;
     border-top: 2px solid rgb(160, 160, 160);
     cursor: pointer;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
 }
 #menu_wrap > p:nth-child(1) {
     border-right: 1px solid rgb(160, 160, 160);
