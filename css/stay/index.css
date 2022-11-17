@@ -35,11 +35,13 @@ main {
 }
 .controller_wrap {
     margin-top: 12px;
-    height: 170px;
+    height: 125px;
     background-color: rgb(213, 239, 248);
+    overflow: hidden;
 }
 .lodging_wrap{
     height: 85px;
+    border-bottom: 1px solid rgb(180, 180, 180);
 }
 .icon:hover {
     cursor: pointer;
@@ -53,30 +55,47 @@ main {
     margin-top: 22.5px;
 }
 
-.date_wrap {
-    height: 85px;
-    border-top: 1px solid rgb(0, 0, 0, 0.18);
-}
-.date {
+.stay_search_area {
+    margin: 30px auto;
     height: 30px;
-    margin-top: 27.5px;
-    text-align: center;
-    
 }
-.check_in, .check_out, .search {
-    border-radius: 3px;
+.stay_search_area > label > span {
+    position: relative;
+    right: -30px;
+    color: #333;
+}
+.stay_search_area > label > input {
+    width: 110px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
     border: 1px solid #999;
-    color: #777;
-    height: 30px;
-    text-align: center;
-    margin-right: 15px;
+}
+#selected {
+    background-color: white;
 }
 #datepicker1, #datepicker2 {
     width: 150px;
 }
-.btn {
-    margin-top: -4px;
-    height: 28px;
+.btn_stay_search {
+    width: 45px;
+    height: 37px;
+    margin-left: 15px;
+    background-color: #48a8ed10;
+    border: 2px solid #48a8ed7e;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#search_btn {
+    color: #48a9ed;
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
 }
 /*컨트롤러 영역 종료*/
 
@@ -200,6 +219,8 @@ article {
 
 
 
+
+
 /*
 #place > p, #history > p, #landmark > p {
     margin-bottom: 5px;
@@ -211,3 +232,4 @@ article {
     color: #ee3366;
 }
 */
+
