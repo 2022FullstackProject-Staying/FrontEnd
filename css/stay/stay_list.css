@@ -5,6 +5,8 @@
     margin-top: 20px;
     margin-right: 5%;
     position: sticky;
+    height: 770px;
+    top: 10px;
 }
 .map_area {
     padding: 10px 0 10px 10px;

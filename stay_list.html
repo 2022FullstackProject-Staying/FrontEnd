@@ -26,9 +26,9 @@
     <script src="js/stay/search_common.js"></script>
     <script src="js/stay/stay_list.js"></script>
 
-    <!--지도-->
+    <!--지도
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=027377f54149e77d2c5a15096947dd45&libraries=services"></script>
-    <script src="js/stay/stay_list_map.js"></script>
+    <script src="js/stay/stay_list_map.js"></script>-->
     <script src="js/stay/stay_list_scroll.js"></script>
 
     <link rel="stylesheet" href="css/stay/common.css">
@@ -56,39 +56,41 @@
         </div>
 
         <!--메인 검색 영역-->
-        <form action="" name="frm_stay_search" class="stay_search_area">
-            <label>
-                <span class="bed fa fa-bed" aria-hidden="true"></span>
-                <section  id="stay_select">
-                    <h2 class="hidden">selectbox</h2>
-                    <input type="hidden" name="selected" id="selected" value="none">
-                    <button type="button" class="toggle_btn" name="toggle_btn" onclick="fn_show_ul()">
-                        <span class="selected_option"></span>
-                        <i class="drop fas fa-caret-down"></i>
-                    </button>
-                    <ul id="select_option" class="hide">
-                        <li><button type="button" class="option_btn" value="house" onclick="fn_option_select(this)">펜션</button></li>
-                        <li><button type="button" class="option_btn" value="hotel" onclick="fn_option_select(this)">호텔</button></li>
-                        <li><button type="button" class="option_btn" value="hanok" onclick="fn_option_select(this)">한옥</button></li>
-                        <li><button type="button" class="option_btn" value="camping" onclick="fn_option_select(this)">캠핑장</button></li>
-                    </ul>
-                </section>
-            </label>
-            <label>
-                <span class="cal far fa-calendar-alt"></span>
-                <input type="text" name="check_in" class="check_in" id="datepicker1" placeholder="체크인">
-            </label>
-            <label>
-                <span class="cal far fa-calendar-alt"></span>
-                <input type="text" name="check_out" class="check_out" id="datepicker2" placeholder="체크아웃">
-            </label>
-            <label>
-                <span class="users fa fa-users" aria-hidden="true"></span>
-                <input type="text" class="stay_person" name="stay_person" placeholder="인원수">
-            </label>
-            <label>
-                <input type="button" class="btn_stay_search" onclick="fn_search_submit()"><span class="saerch fa fa-search" aria-hidden="true"></span>
-            </label>
+        <form action="" name="frm_stay_search">
+            <div class="stay_search_area">
+                <label>
+                    <span class="bed fa fa-bed" aria-hidden="true"></span>
+                    <section  id="stay_select">
+                        <h2 class="hidden">selectbox</h2>
+                        <input type="hidden" name="selected" id="selected" value="none">
+                        <button type="button" class="toggle_btn" name="toggle_btn" onclick="fn_show_ul()">
+                            <span class="selected_option"></span>
+                            <i class="drop fas fa-caret-down"></i>
+                        </button>
+                        <ul id="select_option" class="hide">
+                            <li><button type="button" class="option_btn" value="house" onclick="fn_option_select(this)">펜션</button></li>
+                            <li><button type="button" class="option_btn" value="hotel" onclick="fn_option_select(this)">호텔</button></li>
+                            <li><button type="button" class="option_btn" value="hanok" onclick="fn_option_select(this)">한옥</button></li>
+                            <li><button type="button" class="option_btn" value="camping" onclick="fn_option_select(this)">캠핑장</button></li>
+                        </ul>
+                    </section>
+                </label>
+                <label>
+                    <span class="cal far fa-calendar-alt"></span>
+                    <input type="text" name="check_in" class="check_in" id="datepicker1" placeholder="체크인">
+                </label>
+                <label>
+                    <span class="cal far fa-calendar-alt"></span>
+                    <input type="text" name="check_out" class="check_out" id="datepicker2" placeholder="체크아웃">
+                </label>
+                <label>
+                    <span class="users fa fa-users" aria-hidden="true"></span>
+                    <input type="text" class="stay_person" name="stay_person" placeholder="인원수">
+                </label>
+                <label>
+                    <input type="button" class="btn_stay_search" onclick="fn_search_submit()"><span class="saerch fa fa-search" aria-hidden="true"></span>
+                </label>
+            </div>
         </form>
         <!--컨텐츠 영역-->
         <div id="contents_area">
@@ -105,6 +107,12 @@
                 </div>
                 <div class="conditions_form_area">
                     <form action="" name="frm_stay_condition">
+                        <!-- 메인 검색 input -->
+                        <input type="hidden" name="selected">
+                        <input type="hidden" name="check_in">
+                        <input type="hidden" name="check_out">
+                        <input type="hidden" name="stay_person">
+
                         <div class="price_condition">
                             <h3>가격</h3>
                             <div class="price-range-block">
@@ -179,23 +187,6 @@
             </section>
             <!--숙소 목록 영역-->
             <section class="stay_list_area">
-                <div class="stay_content">
-                    <div class="stay_image">
-                        <!--
-                            <img src="" alt="">
-                        -->
-                    </div>
-                    <div class="stay_info">
-                        <div class="stay_info_l">
-                            <h2>숙소명</h2>
-                            <p>간단설명</p>
-                            <p>
-                                <span>별점</span>
-                                <span>가격</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
                 <a class="stay_content" href="#">
                     <div class="stay_image">
                         <!--
@@ -263,7 +254,24 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </a>
+                <a class="stay_content" href="#">
+                    <div class="stay_image">
+                        <!--
+                            <img src="" alt="">
+                        -->
+                    </div>
+                    <div class="stay_info">
+                        <div class="stay_info_l">
+                            <h2>숙소명</h2>
+                            <p>간단설명</p>
+                            <p>
+                                <span>별점</span>
+                                <span>가격</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
             </section>
         </div>
     </div>
