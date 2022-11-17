@@ -42,7 +42,7 @@ header, footer, body, html, #wrapper{
     width: 100%;
     min-width: 960px;
 }
-#contents_area, #footer_inner{
+#contents_area, #footer_inner, #inner_header{
     width: 960px;
     margin: 0 auto;
 }
@@ -58,10 +58,13 @@ header{
     background-color: #48a9ed;
     position: relative;
 }
+#inner_header {
+    position: relative;
+}
 .logo {
     position: absolute;
     left: 20px;
-    top: 7px;
+    vertical-align: middle;
 }
 .logo img {
     height: 45px;
