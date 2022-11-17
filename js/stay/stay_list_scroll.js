@@ -17,7 +17,11 @@ $(window).scroll(function() {
             '</h2><p>' +
             '</p><p><span>' + 
             '</span><span>' + '</span></p></div></div></a>'
-        );      
+        );
+
+        //조건 폼 sticky
+        $("#contents_area").height($(".stay_list_area").outerHeight());
+        
     }
  });
 
