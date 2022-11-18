@@ -12,8 +12,9 @@ function clause_show() {
 
 function frm_join_submit (){
     
-    if(document.frm_join.name.value === "" || document.frm_join.name.value.length === 0){
+    if(document.frm_join.name.value.trim() === "" || document.frm_join.name.value.length === 0){
         alert("이름을 입력해주세요");
+        document.frm_join.name.focus();
         return false;
     }
 
