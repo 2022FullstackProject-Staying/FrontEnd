@@ -25,6 +25,7 @@ function member_loginCheck(){
 	} else {
 		return true;
 	}
+	document.member_login_form.submit();
 }
 
 function business_loginCheck(){
@@ -41,4 +42,5 @@ function business_loginCheck(){
 	} else {
 		return true;
 	}
+	document.business_login_form.submit();
 }
