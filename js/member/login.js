@@ -23,9 +23,9 @@ function member_loginCheck(){
 		document.member_login_form.pwd.focus();
 		return false;
 	} else {
+		document.member_login_form.submit();
 		return true;
 	}
-	document.member_login_form.submit();
 }
 
 function business_loginCheck(){
@@ -40,7 +40,7 @@ function business_loginCheck(){
 		document.business_login_form.pwd.focus();
 		return false;
 	} else {
+		document.business_login_form.submit();
 		return true;
 	}
-	document.business_login_form.submit();
 }
