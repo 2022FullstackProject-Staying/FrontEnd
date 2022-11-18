@@ -12,12 +12,14 @@ function stay_contents_work(){
 }
 
 function member_loginCheck(){
-	if (document.member_login_form.id.value == ""){
+	if (document.member_login_form.id.value.trim() == ""){
 		alert("아이디를 입력해 주세요.");
+		document.member_login_form.id.value = "";
 		document.member_login_form.id.focus();
 		return false;
-	} else if (document.member_login_form.pwd.value == ""){
+	} else if (document.member_login_form.pwd.value.trim() == ""){
 		alert("비밀번호를 입력해주세요.");
+		document.member_login_form.pwd.value = "";
 		document.member_login_form.pwd.focus();
 		return false;
 	} else {
@@ -26,12 +28,14 @@ function member_loginCheck(){
 }
 
 function business_loginCheck(){
-	if (document.business_login_form.id.value == ""){
+	if (document.business_login_form.id.value.trim() == ""){
 		alert("아이디를 입력해 주세요.");
+		document.business_login_form.id.value = "";
 		document.business_login_form.id.focus();
 		return false;
-	} else if (document.business_login_form.pwd.value == ""){
+	} else if (document.business_login_form.pwd.value.trim() == ""){
 		alert("비밀번호를 입력해주세요.");
+		document.business_login_form.pwd.value = "";
 		document.business_login_form.pwd.focus();
 		return false;
 	} else {
