@@ -5,18 +5,18 @@ $(window).scroll(function() {
             '<a class="stay_content" href="#"><div class="stay_image"><img src="' +
             '" alt=""></div><div class="stay_info"><div class="stay_info_l"><h2>' + 
             '</h2><p>' +
-            '</p><p><span>' + 
-            '</span><span>' + '</span></p></div></div></a>'+
+            '</p><p>' + 
+            '</p><p>' + '</p></div></div></a>'+
             '<a class="stay_content" href="#"><div class="stay_image"><img src="' +
             '" alt=""></div><div class="stay_info"><div class="stay_info_l"><h2>' + 
             '</h2><p>' +
-            '</p><p><span>' + 
-            '</span><span>' + '</span></p></div></div></a>'+
+            '</p><p>' + 
+            '</p><p>' + '</p></div></div></a>'+
             '<a class="stay_content" href="#"><div class="stay_image"><img src="' +
             '" alt=""></div><div class="stay_info"><div class="stay_info_l"><h2>' + 
             '</h2><p>' +
-            '</p><p><span>' + 
-            '</span><span>' + '</span></p></div></div></a>'
+            '</p><p>' + 
+            '</p><p>' + '</p></div></div></a>'
         );
 
         //조건 폼 sticky
