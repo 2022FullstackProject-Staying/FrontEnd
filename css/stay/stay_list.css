@@ -358,6 +358,20 @@ form > button#btn_conditions_search:hover {
     font-size: 1.1rem;
     margin-bottom: 20px;
 }
+.view_star{
+    position: relative;
+    overflow: hidden;
+}
+.view_star > .back_star_wrap {
+    color: #ccc;
+    margin-right: 10px;
+}
+.view_star > .front_star_wrap {
+    position: absolute;
+    color: rgb(255, 204, 0);
+    overflow: hidden;
+    white-space: nowrap;
+}
 .stay_info_l > p:nth-child(4) {
     font-size: 1.1rem;
     text-align: right;

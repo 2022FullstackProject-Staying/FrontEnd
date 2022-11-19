@@ -2,7 +2,6 @@ $(document).ready(function(){
     let stay_intro = document.querySelectorAll("div.stay_info_l > p:nth-child(2)");
     stay_intro.forEach(stay => {
         let text = stay.innerText;
-        console.log(stay)
         if(text.length > 30){
             console.log(text.length )
             stay.innerText = text.slice(0, 30) + "...";

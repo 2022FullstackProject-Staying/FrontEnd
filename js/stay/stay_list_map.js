@@ -1,7 +1,7 @@
-window.onload = function ( ) {
+$(document).ready(function ( ) {
     document.querySelector(".btn_map_close").addEventListener("click", close);
     document.querySelector(".map_bg").addEventListener("click", close);
-}
+});
 
 function close() {
 	document.querySelector(".map_modal_wrap").classList.add("hidden");
