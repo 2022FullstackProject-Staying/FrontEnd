@@ -1,12 +1,15 @@
-/* 객실관리, 리뷰 클릭시 하단 화면 변경 */
+
+
+    
+
 $(function() {
+    /* 객실관리, 리뷰 클릭시 하단 화면 변경 */
     $('.select1').click(function() {
         $('.table').show();
         $('#review_wrap').hide();
         $('#select_wrap').show();
     })
-});
-$(function() {
+
     $('.select2').click(function() {
         $('.table').hide();
         $('#review_wrap').show();
@@ -23,11 +26,40 @@ $(function() {
 
                 // 체크 된 체크박스 해제
                 $(":checkbox").prop("checked",false);
-    })
-});
+    });
 
-/* 클릭시 굵기 변경 */
-window.onload = function () {
+    // 객실 삭제 버튼 클릭시
+    $('#room_del_click').click(function() {
+        $('.del_click').css("display", "inline-block");
+
+        $('#del_click').css("display", "inline-block");
+        $('#canccle_click').css("display", "inline-block");
+
+        $('#add_click').css("display", "none");
+        $('#room_del_click').css("display", "none");
+    });
+
+    // 취소하기 버튼 클릭시
+    $('#canccle_click').click(function() {
+        $('.del_click').css("display", "none");
+
+        $('#del_click').css("display", "none");
+        $('#canccle_click').css("display", "none");
+
+        $('#add_click').css("display", "inline-block");
+        $('#room_del_click').css("display", "inline-block");
+
+        // 체크 된 체크박스 해제
+        $(":checkbox").prop("checked",false);
+    });
+
+    $("#btn_owner_review").click(function () {
+        $(".owner").toggle();
+    });
+
+    $("#del_click").click(function () {
+        $("#btn_remove_room").click();
+    });
 
     var f = document.getElementsByClassName("select")[0];
     var s = document.getElementsByClassName("select")[1];
@@ -45,4 +77,4 @@ window.onload = function () {
        /* f.onmouseover= ("font-weight",'bold');
         f.onmouseout= ("font-weight",'');*/
     }
-}  
+});

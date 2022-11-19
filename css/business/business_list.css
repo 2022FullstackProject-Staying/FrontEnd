@@ -57,10 +57,11 @@ main {
     width: 958px;
     overflow: hidden;
     margin: 20px 0 80px;
+    padding-left: 30px;
 }
-#management > table {
-    margin-top: 40px;
-    margin-bottom: 50px;
+#management .table {
+    margin: 40px auto 50px;
+    width: 97%;
 }
 .hei {
     height: 100px;
@@ -74,6 +75,14 @@ main {
     margin: 45px 0 0 45px;
 }
 .del_click {
+    display: none;
+}
+.table > thead > tr > th:last-child > span{
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+#btn_remove_room {
     display: none;
 }
 /* // room info */
