@@ -5,9 +5,11 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    height: 40px;
-    padding: 20px 0;
+    padding: 15px 0;
     border-bottom: 1px solid #ddd;
+}
+.stay_search_area > label {
+    height: 37px;
 }
 #stay_select {
     width: 200px;

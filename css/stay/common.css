@@ -47,7 +47,9 @@ header, footer, body, html, #wrapper{
     width: 960px;
     margin: 0 auto;
 }
-
+#contents_area {
+    margin-bottom: 60px;
+}
 /*
  글 색: #eff500
  배경색: #48a9ed
@@ -61,19 +63,21 @@ header{
 }
 #inner_header {
     position: relative;
+    height: 100%;
 }
 .logo {
-    position: absolute;
-    left: 20px;
+    position: relative;
+    display: inline-block;
     vertical-align: middle;
+    top: 7px;
 }
 .logo img {
     height: 45px;
 }
 header nav{    
     position: absolute;
-    right: 20px;
-    top: 13px;
+    right: 0;
+    top: 15px;
 }
 nav > a {
     vertical-align: middle;
