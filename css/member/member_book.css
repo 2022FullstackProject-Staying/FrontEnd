@@ -20,29 +20,43 @@
 }
 .book_room_area {
     width: 100%;
-    padding: 10px 10px 10px 20px;
+    height: 240px;
+    padding: 13px;
     border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 0;
+}
+.book_room_image {
+    position: relative;
+    display: inline-block;
+    width: 36%;
+    height: 75%;
+    vertical-align: top;
+    overflow: hidden;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-    box-sizing: border-box;
 }
-.book_room_image {
-    display: inline-block;
-    width: 27%;
-    height: 100px;
-    background-color: #666;
-    
+.book_room_image > img {
+    width: 137%;
+    position: relative;
+    left: -17%;
 }
 .book_room_content {
     display: inline-block;
-    width: 69%;
+    width: 60%;
     padding-left: 30px;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
+    vertical-align: top;
 }
 .book_room_title {
     font-size: 1.2rem;
@@ -57,7 +71,7 @@
 .book_room_checktime {
     width: 100%;
     text-align: center;
-    margin: 15px 0;
+    margin: 10px 0;
 }
 .book_room_checktime th{
     color: #666;
@@ -68,12 +82,12 @@
     font-size: 1.1rem;
 }
 .book_room_checktime td:first-child , .book_room_checktime th:first-child{
-    padding-left: 10px;
-    padding-right: 30px;
+    padding-left: 7px;
+    padding-right: 15px;
 }
 .book_room_checktime td:last-child, .book_room_checktime th:last-child {
-    padding-left: 30px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 7px;
 }
 .review_cancle_area::before {
     clear: both;
