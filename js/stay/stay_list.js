@@ -22,3 +22,25 @@ function stay_kind_search (obj) {
     }
 }*/
 
+function fn_add_form() {
+    
+    let top_form = document.frm_stay_search;
+    let contidion_form = document.frm_stay_condition;
+
+    let checked_star = document.querySelector('input[name="grade_value"]:checked');
+    if(checked_star){
+        top_form.grade_value = checked_star.value;
+
+    } 
+    if(contidion_form.min_price.value != null){
+        top_form.min_price.value = contidion_form.min_price.value;
+
+    } 
+    if(contidion_form.max_price.value != null){
+        top_form.max_price.value = contidion_form.max_price.value;
+
+    }
+    document.querySelector("input.btn_stay_search").click();
+    return false;
+
+}

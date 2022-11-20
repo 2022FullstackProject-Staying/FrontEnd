@@ -59,6 +59,10 @@
         <!--메인 검색 영역-->
         <form action="" name="frm_stay_search">
             <div class="stay_search_area">
+                <input type="hidden" name="min_price">
+                <input type="hidden" name="max_price">
+                <input type="hidden" name="grade_value">
+                
                 <label>
                     <span class="bed fa fa-bed" aria-hidden="true"></span>
                     <section  id="stay_select">
@@ -108,11 +112,6 @@
                 </div>
                 <div class="conditions_form_area">
                     <form action="" name="frm_stay_condition">
-                        <!-- 메인 검색 input -->
-                        <input type="hidden" name="selected">
-                        <input type="hidden" name="check_in">
-                        <input type="hidden" name="check_out">
-                        <input type="hidden" name="stay_person">
 
                         <div class="price_condition">
                             <h3>가격</h3>
@@ -127,7 +126,7 @@
                         <div class="grade_condition">
                             <h3>평점</h3>
                             <p>
-                                <input type="radio" name="grade_value" id="grade_4_up">
+                                <input type="radio" name="grade_value" id="grade_4_up" value="8_up">
                                 <label for="grade_4_up">
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star"></span>
@@ -137,7 +136,7 @@
                                 </label>
                             </p>
                             <p>
-                                <input type="radio" name="grade_value" id="grade_3_up">
+                                <input type="radio" name="grade_value" id="grade_3_up" value="6_up">
                                 <label for="grade_3_up">
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star"></span>
@@ -146,7 +145,7 @@
                                 </label>
                             </p>
                             <p>
-                                <input type="radio" name="grade_value" id="grade_2_up">
+                                <input type="radio" name="grade_value" id="grade_2_up" value="4_up">
                                 <label for="grade_2_up">
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star"></span>
@@ -182,7 +181,7 @@
                             </label>
                         </div>
                         -->
-                        <button type="submit" name="btn_conditions_search"  id="btn_conditions_search">검색하기</button>
+                        <input type="button" name="btn_conditions_search" value="검색하기"  id="btn_conditions_search" onclick="fn_add_form()">
                     </form>
                 </div>
             </section>

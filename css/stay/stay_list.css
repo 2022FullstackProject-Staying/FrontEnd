@@ -221,7 +221,7 @@ form[name="frm_stay_condition"] {
     position: relative;
     padding-top: 60px;
 }
-form > button#btn_conditions_search {
+form > input#btn_conditions_search {
     position: absolute;
     top: 15px;
     text-align: center;
@@ -238,7 +238,7 @@ form > button#btn_conditions_search {
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
-form > button#btn_conditions_search:hover {
+form > input#btn_conditions_search:hover {
     color: #f0f0f0;
     background-color: #48a8ed;
 }
