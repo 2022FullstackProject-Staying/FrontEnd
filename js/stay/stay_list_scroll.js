@@ -20,7 +20,7 @@ $(window).scroll(function() {
         );
 
         //조건 폼 sticky
-        $("#contents_area").height($(".stay_list_area").outerHeight());
+        //$("#contents_area").height($(".stay_list_area").outerHeight());
         
     }
  });

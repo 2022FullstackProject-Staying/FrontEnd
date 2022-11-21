@@ -4,14 +4,11 @@
     width: 90%;
     margin-top: 0 auto ;
 }
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
+
 .price_range_block .sliders_control {
     position: relative;
-    min-height: 50px;
+    min-height: 20px;
+    margin-top: 15px;
 }
   
 .price_range_block .form_control {
@@ -57,16 +54,21 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .price_range_block input[type="number"] {
-    color: #8a8383;
-    width: 50px;
-    height: 30px;
-    font-size: 20px;
-    border: none;
+    color: #222;
+    width: 80px;
+    height: 18px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
 }
   
 .price_range_block input[type=number]::-webkit-inner-spin-button, 
 .price_range_block input[type=number]::-webkit-outer-spin-button {  
-     opacity: 1;
+     opacity: 0;
 }
   
 .price_range_block input[type="range"] {

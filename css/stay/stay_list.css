@@ -5,7 +5,6 @@
     margin-top: 20px;
     margin-right: 5%;
     position: sticky;
-    height: 770px;
     top: 10px;
 }
 .map_area {
@@ -40,6 +39,7 @@
 .map > div > p {
     font-size: 1.1rem;
 }
+
 div[class $= "condition"] > h3 {
     font-size: 1.05rem;
     margin-bottom: 15px;
@@ -292,6 +292,33 @@ form > input#btn_conditions_search:hover {
 }
 .hidden {
     display: none;
+}
+#map_main .wrap {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 3px;
+}
+#map_main .wrap .title {
+    position: relative;
+    text-align: left;
+    padding: 10px 3px;
+    border-bottom: 1px solid #999;
+    color: #3054cc;
+    font-weight: 600;
+}
+#map_main .wrap .title .close {
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    padding: 5px 9px;
+    border: 1px solid #48a9ed90;
+    background-color: #48a9ed20;
+    color: #666;
+    border-radius: 3px;
+}
+#map_main .wrap .ellipsis {
+    padding: 10px 3px;
+    min-width: 200px;
 }
 
 /* 숙소 목록 영역 */

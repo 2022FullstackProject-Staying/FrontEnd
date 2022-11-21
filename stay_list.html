@@ -30,7 +30,6 @@
     <!--지도
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=027377f54149e77d2c5a15096947dd45&libraries=services"></script>
     <script src="js/stay/stay_list_map.js"></script>-->
-    <script src="js/stay/stay_list_scroll.js"></script>
 
     <link rel="stylesheet" href="css/stay/common.css">
     <link rel="stylesheet" href="css/stay/search_common.css">
@@ -117,15 +116,16 @@
                             <h3>가격</h3>
                             <div class="price_range_block">
                                 <div class="sliders_control">
-                                    <input id="fromSlider" type="range" value="30" min="30" max="100"/>
-                                    <input id="toSlider" type="range" value="50" min="30" max="100"/>
+                                    <input id="fromSlider" type="range" value="110000" min="100000" max="200000"/>
+                                    <input id="toSlider" type="range" value="180000" min="100000" max="200000"/>
                                  </div>
                                  <div class="form_control">
                                    <div class="form_control_container">
-                                       <input class="form_control_container__time__input" type="number" id="fromInput" value="30" min="0" max="100"/>
+                                       <input class="form_control_container__time__input" type="number" id="fromInput" value="110000" min="100000" max="200000"/>
                                      </div>
+                                     -
                                      <div class="form_control_container">
-                                       <input class="form_control_container__time__input" type="number" id="toInput" value="50" min="0" max="100"/>
+                                       <input class="form_control_container__time__input" type="number" id="toInput" value="180000" min="100000" max="200000"/>
                                      </div>
                                  </div>
                             </div>

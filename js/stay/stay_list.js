@@ -7,6 +7,8 @@ $(document).ready(function(){
             stay.innerText = text.slice(0, 30) + "...";
         }
     })
+
+    $("#contents_area").height($(".stay_list_area").outerHeight());
 });
 function stay_kind_search (obj) {
     let label = document.querySelector(".stay_type_condition label[for="+obj.value+"]");
@@ -32,12 +34,12 @@ function fn_add_form() {
         top_form.grade_value = checked_star.value;
 
     } 
-    if(contidion_form.min_price.value != null){
-        top_form.min_price.value = contidion_form.min_price.value;
+    if(contidion_form.fromInput.value != null){
+        top_form.min_price.value = contidion_form.fromInput.value;
 
     } 
-    if(contidion_form.max_price.value != null){
-        top_form.max_price.value = contidion_form.max_price.value;
+    if(contidion_form.toInput.value != null){
+        top_form.max_price.value = contidion_form.toInput.value;
 
     }
     document.querySelector("input.btn_stay_search").click();

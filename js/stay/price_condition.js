@@ -1,55 +1,65 @@
 $(document).ready(function(){
 	function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
 		const [from, to] = getParsed(fromInput, toInput);
+		const min = fromInput.min;
 		fillSlider(fromInput, toInput, '#C6C6C6', '#48a9ed', controlSlider);
 		if (from > to) {
 			fromSlider.value = to;
 			fromInput.value = to;
-		} else {
+		} else if(from <= min){
+			fromSlider.value = min;
+			fromInput.value = min;
+		}else {
 			fromSlider.value = from;
+			fromInput.value = from;
 		}
 	}
 		
 	function controlToInput(toSlider, fromInput, toInput, controlSlider) {
 		const [from, to] = getParsed(fromInput, toInput);
+		const max = fromInput.max;
 		fillSlider(fromInput, toInput, '#C6C6C6', '#48a9ed', controlSlider);
 		setToggleAccessible(toInput);
+		if(to > max) {
+			toSlider.value = max;
+			toInput.value = max;
+		} else if (from <= to) {
+			toSlider.value = to;
+			toInput.value = to;
+		} else {
+			toInput.value = from;
+			toSlider.value = from;
+		}
+	}
+
+	function controlFromSlider(fromSlider, toSlider, fromInput) {
+		const [from, to] = getParsed(fromSlider, toSlider);
+		fillSlider(fromSlider, toSlider, '#C6C6C6', '#48a9ed', toSlider);
+		if (from > to) {
+			fromSlider.value = to;
+			fromInput.value = to;
+		} else {
+			fromInput.value = from;
+		}
+	}
+
+	function controlToSlider(fromSlider, toSlider, toInput) {
+		const [from, to] = getParsed(fromSlider, toSlider);
+		fillSlider(fromSlider, toSlider, '#C6C6C6', '#48a9ed', toSlider);
+		setToggleAccessible(toSlider);
 		if (from <= to) {
 			toSlider.value = to;
 			toInput.value = to;
 		} else {
 			toInput.value = from;
+			toSlider.value = from;
 		}
 	}
 
-	function controlFromSlider(fromSlider, toSlider, fromInput) {
-	const [from, to] = getParsed(fromSlider, toSlider);
-	fillSlider(fromSlider, toSlider, '#C6C6C6', '#48a9ed', toSlider);
-	if (from > to) {
-		fromSlider.value = to;
-		fromInput.value = to;
-	} else {
-		fromInput.value = from;
-	}
-	}
-
-	function controlToSlider(fromSlider, toSlider, toInput) {
-	const [from, to] = getParsed(fromSlider, toSlider);
-	fillSlider(fromSlider, toSlider, '#C6C6C6', '#48a9ed', toSlider);
-	setToggleAccessible(toSlider);
-	if (from <= to) {
-		toSlider.value = to;
-		toInput.value = to;
-	} else {
-		toInput.value = from;
-		toSlider.value = from;
-	}
-	}
-
 	function getParsed(currentFrom, currentTo) {
-	const from = parseInt(currentFrom.value, 10);
-	const to = parseInt(currentTo.value, 10);
-	return [from, to];
+		const from = parseInt(currentFrom.value, 10);
+		const to = parseInt(currentTo.value, 10);
+		return [from, to];
 	}
 
 	function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
@@ -66,13 +76,13 @@ $(document).ready(function(){
 		${sliderColor} 100%)`;
 	}
 
-	function setToggleAccessible(currentTarget) {
-	const toSlider = document.querySelector('#toSlider');
-	if (Number(currentTarget.value) <= 0 ) {
-		toSlider.style.zIndex = 2;
-	} else {
-		toSlider.style.zIndex = 0;
-	}
+	function setToggleAccessible(currentTarget, min_price) {
+		const toSlider = document.querySelector('#toSlider');
+		if (Number(currentTarget.value) <= min_price ) {
+			toSlider.style.zIndex = 2;
+		} else {
+			toSlider.style.zIndex = 0;
+		}
 	}
 
 	const fromSlider = document.querySelector('#fromSlider');
@@ -80,10 +90,10 @@ $(document).ready(function(){
 	const fromInput = document.querySelector('#fromInput');
 	const toInput = document.querySelector('#toInput');
 	fillSlider(fromSlider, toSlider, '#C6C6C6', '#48a9ed', toSlider);
-	setToggleAccessible(toSlider);
+	setToggleAccessible(toSlider, fromSlider.min);
 
 	fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
 	toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
-	fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
-	toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+	fromInput.onchange = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
+	toInput.onchange = () => controlToInput(toSlider, fromInput, toInput, toSlider);
 });
