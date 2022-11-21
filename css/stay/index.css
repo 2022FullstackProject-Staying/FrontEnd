@@ -102,9 +102,12 @@ main {
 
 /*인기숙소 영역 시작*/
 #best_hotel_wrap {
-    height: 325px;
+    height: 340px;
     margin-top: 70px;
     overflow: hidden;
+}
+#best_hotel_wrap > div {
+    height: 340px;
 }
 .best_hotel > h2, .best_pension > h2, .best_camping > h2, .best_hanok > h2 {
     height: 40px;
