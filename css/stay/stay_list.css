@@ -2,6 +2,7 @@
 .conditions_map_area {
     width: 25%;
     display: inline-block;
+    vertical-align: top;
     margin-top: 20px;
     margin-right: 5%;
     position: sticky;
@@ -325,13 +326,14 @@ form > input#btn_conditions_search:hover {
 /* 숙소 목록 영역 */
 #contents_area {
     position: relative;
+    font-size: 0;
 }
 
 .stay_list_area {
+    vertical-align: top;
     width: 68%;
     display: inline-block;
-    position: absolute;
-    top: 70px;
+    padding-top: 70px;
 }
 
 .stay_content {
@@ -371,6 +373,7 @@ form > input#btn_conditions_search:hover {
 }
 .stay_info_l > h2 {
     margin-bottom: 10px;
+    font-size: 1.5rem;
 }
 .stay_info_l > p:nth-child(2) {
     display: inline-block;

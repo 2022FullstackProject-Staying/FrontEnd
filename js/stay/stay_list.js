@@ -31,7 +31,7 @@ function fn_add_form() {
 
     let checked_star = document.querySelector('input[name="grade_value"]:checked');
     if(checked_star){
-        top_form.grade_value = checked_star.value;
+        top_form.grade_value.value = checked_star.value;
 
     } 
     if(contidion_form.fromInput.value != null){
@@ -42,7 +42,9 @@ function fn_add_form() {
         top_form.max_price.value = contidion_form.toInput.value;
 
     }
+
     document.querySelector("input.btn_stay_search").click();
+    
     return false;
 
 }

@@ -48,7 +48,7 @@ header, footer, body, html, #wrapper{
     margin: 0 auto;
 }
 #contents_area {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
 }
 /*
  글 색: #eff500

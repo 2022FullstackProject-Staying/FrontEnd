@@ -4,12 +4,12 @@
 /* 좌측 예약자, 결제 정보란 */
 #contents_area {
     margin-top: 80px;
+    overflow: hidden;
 }
 
 #info {
     float: left;
     width: 600px;
-    height: 700px;
 }
 
 
@@ -213,6 +213,9 @@ input[type="checkbox"]{
     height: 580px;
     border: 1px solid rgb(180, 180, 180);
     border-radius: 3px;
+}
+#room_info::after {
+    clear: both;
 }
 .room_info_wrap {
     margin: 20px auto;
