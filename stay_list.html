@@ -115,12 +115,19 @@
 
                         <div class="price_condition">
                             <h3>가격</h3>
-                            <div class="price-range-block">
-                                <div id="slider-range" class="price-filter-range" name="range_input"></div>
-                                <div class="price_value_input">
-                                    <input type="number" min=0 max="9900" oninput="validity.valid||(value='0');" name="min_price" id="min_price" class="price-range-field" /> -
-                                    <input type="number" min=0 max="10000" oninput="validity.valid||(value='10000');" name="max_price" id="max_price" class="price-range-field" />
-                                </div>
+                            <div class="price_range_block">
+                                <div class="sliders_control">
+                                    <input id="fromSlider" type="range" value="30" min="30" max="100"/>
+                                    <input id="toSlider" type="range" value="50" min="30" max="100"/>
+                                 </div>
+                                 <div class="form_control">
+                                   <div class="form_control_container">
+                                       <input class="form_control_container__time__input" type="number" id="fromInput" value="30" min="0" max="100"/>
+                                     </div>
+                                     <div class="form_control_container">
+                                       <input class="form_control_container__time__input" type="number" id="toInput" value="50" min="0" max="100"/>
+                                     </div>
+                                 </div>
                             </div>
                         </div>
                         <div class="grade_condition">

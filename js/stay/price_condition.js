@@ -1,79 +1,89 @@
 $(document).ready(function(){
-	
-	$('#price-range-submit').hide();
-
-	$("#min_price,#max_price").on('change', function () {
-
-
-	  $('#price-range-submit').show();
-
-	  var min_price_range = parseInt($("#min_price").val());
-
-	  var max_price_range = parseInt($("#max_price").val());
-
-	  if (min_price_range > max_price_range) {
-		$('#max_price').val(min_price_range);
-	  }
-
-	  $("#slider-range").slider({
-		values: [min_price_range, max_price_range]
-	  });
-	  
-	});
-
-
-	$("#min_price,#max_price").on("paste keyup", function () {                                        
-
-	  $('#price-range-submit').show();
-
-	  var min_price_range = parseInt($("#min_price").val());
-
-	  var max_price_range = parseInt($("#max_price").val());
-	  
-	  if(min_price_range == max_price_range){
-
-			max_price_range = min_price_range + 100;
-			
-			$("#min_price").val(min_price_range);		
-			$("#max_price").val(max_price_range);
-	  }
-
-	  $("#slider-range").slider({
-		values: [min_price_range, max_price_range]
-	  });
-
-	});
-
-
-	$(function () {
-	  $("#slider-range").slider({
-		range: true,
-		orientation: "horizontal",
-		min: 0,
-		max: 10000,
-		values: [0, 10000],
-		step: 100,
-
-		slide: function (event, ui) {
-		  if (ui.values[0] == ui.values[1]) {
-			  return false;
-		  }
-		  
-		  $("#min_price").val(ui.values[0]);
-		  $("#max_price").val(ui.values[1]);
+	function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
+		const [from, to] = getParsed(fromInput, toInput);
+		fillSlider(fromInput, toInput, '#C6C6C6', '#48a9ed', controlSlider);
+		if (from > to) {
+			fromSlider.value = to;
+			fromInput.value = to;
+		} else {
+			fromSlider.value = from;
 		}
-	  });
+	}
+		
+	function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+		const [from, to] = getParsed(fromInput, toInput);
+		fillSlider(fromInput, toInput, '#C6C6C6', '#48a9ed', controlSlider);
+		setToggleAccessible(toInput);
+		if (from <= to) {
+			toSlider.value = to;
+			toInput.value = to;
+		} else {
+			toInput.value = from;
+		}
+	}
 
-	  $("#min_price").val($("#slider-range").slider("values", 0));
-	  $("#max_price").val($("#slider-range").slider("values", 1));
+	function controlFromSlider(fromSlider, toSlider, fromInput) {
+	const [from, to] = getParsed(fromSlider, toSlider);
+	fillSlider(fromSlider, toSlider, '#C6C6C6', '#48a9ed', toSlider);
+	if (from > to) {
+		fromSlider.value = to;
+		fromInput.value = to;
+	} else {
+		fromInput.value = from;
+	}
+	}
 
-	});
+	function controlToSlider(fromSlider, toSlider, toInput) {
+	const [from, to] = getParsed(fromSlider, toSlider);
+	fillSlider(fromSlider, toSlider, '#C6C6C6', '#48a9ed', toSlider);
+	setToggleAccessible(toSlider);
+	if (from <= to) {
+		toSlider.value = to;
+		toInput.value = to;
+	} else {
+		toInput.value = from;
+		toSlider.value = from;
+	}
+	}
 
-	$("#slider-range,#price-range-submit").click(function () {
+	function getParsed(currentFrom, currentTo) {
+	const from = parseInt(currentFrom.value, 10);
+	const to = parseInt(currentTo.value, 10);
+	return [from, to];
+	}
 
-	  var min_price = $('#min_price').val();
-	  var max_price = $('#max_price').val();
-	});
+	function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+		const rangeDistance = to.max-to.min;
+		const fromPosition = from.value - to.min;
+		const toPosition = to.value - to.min;
+		controlSlider.style.background = `linear-gradient(
+		to right,
+		${sliderColor} 0%,
+		${sliderColor} ${(fromPosition)/(rangeDistance)*100}%,
+		${rangeColor} ${((fromPosition)/(rangeDistance))*100}%,
+		${rangeColor} ${(toPosition)/(rangeDistance)*100}%, 
+		${sliderColor} ${(toPosition)/(rangeDistance)*100}%, 
+		${sliderColor} 100%)`;
+	}
 
-	
+	function setToggleAccessible(currentTarget) {
+	const toSlider = document.querySelector('#toSlider');
+	if (Number(currentTarget.value) <= 0 ) {
+		toSlider.style.zIndex = 2;
+	} else {
+		toSlider.style.zIndex = 0;
+	}
+	}
+
+	const fromSlider = document.querySelector('#fromSlider');
+	const toSlider = document.querySelector('#toSlider');
+	const fromInput = document.querySelector('#fromInput');
+	const toInput = document.querySelector('#toInput');
+	fillSlider(fromSlider, toSlider, '#C6C6C6', '#48a9ed', toSlider);
+	setToggleAccessible(toSlider);
+
+	fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
+	toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+	fromInput.oninput = () => controlFromInput(fromSlider, fromInput, toInput, toSlider);
+	toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
 });
