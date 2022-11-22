@@ -326,7 +326,6 @@ form > input#btn_conditions_search:hover {
 /* 숙소 목록 영역 */
 #contents_area {
     position: relative;
-    font-size: 0;
 }
 
 .stay_list_area {

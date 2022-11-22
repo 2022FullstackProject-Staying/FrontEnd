@@ -8,7 +8,11 @@ $(document).ready(function(){
         }
     })
 
-    $("#contents_area").height($(".stay_list_area").outerHeight());
+    if($(".stay_list_area").outerHeight() > $(".conditions_map_area").outerHeight()){
+        $("#contents_area").height($(".stay_list_area").outerHeight());
+    } else {
+        $("#contents_area").height($(".conditions_map_area").outerHeight());
+    }
 });
 function stay_kind_search (obj) {
     let label = document.querySelector(".stay_type_condition label[for="+obj.value+"]");
