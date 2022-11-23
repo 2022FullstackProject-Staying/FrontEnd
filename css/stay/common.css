@@ -66,13 +66,13 @@ header{
     height: 100%;
 }
 .logo {
+    height: 100%;
     position: relative;
     display: inline-block;
-    vertical-align: middle;
-    top: 7px;
 }
 .logo img {
     height: 45px;
+    vertical-align: middle;
 }
 header nav{    
     position: absolute;
