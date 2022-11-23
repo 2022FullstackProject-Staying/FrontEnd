@@ -92,3 +92,14 @@ form[name="frm_room_info"] > input {
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
 }
+
+
+#test{
+    height: 170px;
+}
+#test > img {
+    width: 200px;
+}
+#test > input {
+    
+}
