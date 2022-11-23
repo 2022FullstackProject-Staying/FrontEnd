@@ -70,6 +70,9 @@ header{
     position: relative;
     display: inline-block;
 }
+.logo a {
+    vertical-align: middle;
+}
 .logo img {
     height: 45px;
     vertical-align: middle;
