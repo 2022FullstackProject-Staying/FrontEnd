@@ -53,9 +53,12 @@ $(function() {
         $(":checkbox").prop("checked",false);
     });
 
-    $("#btn_owner_review").click(function () {
-        $(".owner").toggle();
-    });
+
+
+
+
+    
+    
 
     $("#del_click").click(function () {
         $("#btn_remove_room").click();
@@ -77,4 +80,10 @@ $(function() {
        /* f.onmouseover= ("font-weight",'bold');
         f.onmouseout= ("font-weight",'');*/
     }
+
+    document.querySelectorAll(".btn_owner_review").forEach(btn => {
+        btn.addEventListener('click',function () {
+            $(".owner").eq(this.value-1).toggle();
+        });
+    });
 });
