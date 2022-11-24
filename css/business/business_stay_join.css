@@ -119,3 +119,7 @@
     -o-border-radius: 3px;
 }
 
+#preview {
+    width: 150px;
+    height: 150px;
+}
