@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/member/member_common.css">
     <link rel="stylesheet" href="css/member/member_book.css">
     <link rel="stylesheet" href="css/member/star.css">
+    <!-- 이미지 선택시 미리보기 -->
+    <script src="js/stay/readimage.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -116,8 +118,8 @@
                                             <textarea class="form-control" name="review_content" id="message-text" maxlength="300" placeholder="10자 이상 작성해주세요"></textarea>
                                         </div>
                                         <div class="mb-3">
-                                            <img src="images/logocap.png" alt="">
-                                            <input type="file" name="review_image" class="form-control">
+                                            <img src="" id="preview" alt="#">
+                                            <input type="file" name="review_image" class="form-control" onchange="readImage(this)">
                                         </div>
                                     </div>
                                     <div class="modal-footer">
