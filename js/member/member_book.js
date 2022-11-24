@@ -14,11 +14,13 @@ function fn_review_form_submit() {
 
 
 function fn_review_active() {
-    let check_out = document.querySelector(".book_room_checktime tr:last-child > td:last-child > time").getAttribute("datetime");
-    let check_out_date = new Date(check_out);
+    let check_out = document.querySelector(".book_room_checktime tr:last-child > td:last-child > time").innerText;
+    let year = check_out.substring(0, 4);
+    let month = check_out.substring(4, 6);
+    let day = check_out.substring(6, 8);
+    let check_out_date = new Date(year, month, day);
     let now = new Date();
-    console.log(now)
-    if(check_out_date > now) {
+    if(check_out_date < now) {
         $('#exampleModal').modal("hide");
     }else {
         $('#exampleModal').modal("show");
